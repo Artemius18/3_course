@@ -7,9 +7,7 @@ http
     const html = "./xmlhttprequest.html";
     if (request.url === "/api/name") {
       response.writeHead(200, { "Content-Type": "text/plain;charset=utf-8" });
-      response.end(
-        "Горощеня Владислав Сергеевич\nстудент ФИТ, ПОИТ, 3 курс 4 группа"
-      );
+      response.end("Пшенко Артем Федорович");
     } else if (request.url === "/xmlhttprequest") {
       fs.readFile(html, (err, data) => {
         response.writeHead(200, { "Content-Type": "text/html;charset=utf-8" });
@@ -28,5 +26,5 @@ http
     }
   })
   .listen(5000, () =>
-    console.log("Server running at localhost:5000/xmlhttprequest")
+    console.log("Server running at http://localhost:5000/xmlhttprequest")
   );

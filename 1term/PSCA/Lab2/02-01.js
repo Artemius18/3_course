@@ -6,7 +6,7 @@ http
   .createServer(function (request, response) {
     if (request.url === "/html") {
       fs.readFile(
-        path.join(__dirname, "index.html"), //dirname - путь к текущему рабочему каталогу скрипта
+        path.join(__dirname, "index.html"),
         "utf-8",
         function (error, content) {
           if (error) {

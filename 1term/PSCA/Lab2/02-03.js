@@ -1,14 +1,15 @@
 const http = require("http");
+const fs = require("fs");
 
 http
   .createServer((request, response) => {
     if (request.url === "/api/name") {
-      response.writeHead(200, { "Content-Type": "text/plain; charset=utf-8" });
-      response.end("Пшенко Артем Федорович\nПОИТ, 3 курс 4 группа");
+      response.writeHead(200, { "Content-Type": "text/plain;charset=utf-8" });
+      response.end("Пшенко Артем Федорович");
     } else {
       response.end(
-        "<html><body><h1>Visit localhost:6000/api/name to get access</h1></body></html>"
+        "<html><body><h1>Visit localhost:5000/api/name to get access</h1></body></html>"
       );
     }
   })
-  .listen(6000);
+  .listen(5000);
