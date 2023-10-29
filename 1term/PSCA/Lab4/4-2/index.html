@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Server Interaction</title>
+</head>
+<body>
+  <h1>Server Interaction</h1>
+
+  <div id="result"></div>
+  <button id="get-button" onclick="getRows()">Get Data</button>
+  
+  <form id="post-form" onsubmit="event.preventDefault(); addRow();">
+    <h2>POST Request</h2>
+    <label for="id">ID:</label>
+    <input type="number" id="post-id" required>
+    <label for="name">Name:</label>
+    <input type="text" id="post-name" required>
+    <label for="bday">Birthday:</label>
+    <input type="date" id="post-bday" required max="2023-10-24">
+    <button type="submit">Add Row</button>
+  </form>
+
+  <form id="put-form" onsubmit="event.preventDefault(); updateRow();">
+    <h2>PUT Request</h2>
+    <label for="id">ID:</label>
+    <input type="number" id="put-id" required>
+    <label for="name">Name:</label>
+    <input type="text" id="put-name" required>
+    <label for="bday">Birthday:</label>
+    <input type="date" id="put-bday" required max="2023-10-24">
+    <button type="submit">Update Row</button>
+  </form>
+
+  <form id="delete-form" onsubmit="event.preventDefault(); deleteRow();">
+    <h2>DELETE Request</h2>
+    <label for="id">ID:</label>
+    <input type="number" id="delete-id" required>
+    <button type="submit">Delete Row</button>
+  </form>
+
+  
+
+  <script>
+    let rowData = null;
+
+    function getRows() {
+      fetch('/api/db', { method: 'GET' })
+        .then(response => response.json())
+        .then(data => {
+          const resultDiv = document.getElementById('result');
+          resultDiv.textContent = JSON.stringify(data, null, 2);
+          rowData = data; // Сохранить данные в переменной rowData
+        });
+    }
+
+    function addRow() {
+      const id = document.getElementById('post-id').value;
+      const name = document.getElementById('post-name').value;
+      const bday = document.getElementById('post-bday').value;
+
+      fetch('/api/db', {
+        method: 'POST',
+        body: JSON.stringify({ id, name, bday }),
+        headers: { 'Content-Type': 'application/json' }
+      })
+        .then(response => response.json())
+        .then(() => {
+          // Не выполнять никаких действий при успешной отправке POST-запроса
+        });
+    }
+
+    function updateRow() {
+      const id = document.getElementById('put-id').value;
+      const name = document.getElementById('put-name').value;
+      const bday = document.getElementById('put-bday').value;
+
+      fetch(`/api/db?id=${id}`, {
+        method: 'PUT',
+        body: JSON.stringify({ name, bday }),
+        headers: { 'Content-Type': 'application/json' }
+      })
+        .then(response => response.json())
+        .then(() => {
+          // Не выполнять никаких действий при успешной отправке PUT-запроса
+        });
+    }
+
+    function deleteRow() {
+      const id = document.getElementById('delete-id').value;
+
+      fetch(`/api/db?id=${id}`, { method: 'DELETE' })
+        .then(response => response.json())
+        .then(() => {
+          // Не выполнять никаких действий при успешной отправке DELETE-запроса
+        });
+    }
+  </script>
+</body>
+</html>
