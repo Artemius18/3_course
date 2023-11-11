@@ -44,7 +44,6 @@ const server = http.createServer((req, res) => {
           res.statusCode = 400;
           res.end('Cannot update the object ID, an object with this ID already exists');
         } else {
-          // Обновляем только имя и дату рождения существующей записи.
           existingRow.name = updatedData.name;
           existingRow.birthdate = updatedData.birthdate;
           

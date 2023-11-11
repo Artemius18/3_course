@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email</title>      
+    </head>
+    <body>
+        <div id="container">
+            <form action="http://localhost:5000" method="POST">
+                <div class="row">
+                    <label for="sender">From</label>
+                    <input type="email" name="sender" id="emailSender" required/>
+                </div>
+                <div class="row">
+                    <label for="receiver">To</label>
+                    <input type="email" name="receiver" id="emailReceiver" required/>
+                </div>
+                <div class="row">
+                    <label for="topicOfMes">Topic</label>
+                    <input type="text" name="topic" id="topicOfMes"/>
+                </div>
+                <div class="row">
+                    <label for="topicOfMes">Message</label>
+                    <input type="text" name="message" id="Mes"/>
+                </div>
+                <div class="row">
+                    <button type="submit">Send email</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

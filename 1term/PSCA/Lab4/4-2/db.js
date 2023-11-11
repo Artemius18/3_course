@@ -3,7 +3,33 @@ const querystring = require('querystring');
 const url = require('url');
 
 
-const db = [];
+const db = [
+  {
+    "id": 1,
+    "name": "Artyom",
+    "bday": "2003-10-11"
+  },
+  {
+    "id": 2,
+    "name": "Elena",
+    "bday": "1990-05-15"
+  },
+  {
+    "id": 3,
+    "name": "Alexey",
+    "bday": "1987-12-03"
+  },
+  {
+    "id": 4,
+    "name": "Natalia",
+    "bday": "1995-08-22"
+  },
+  {
+    "id": 5,
+    "name": "Ivan",
+    "bday": "1982-06-30"
+  }
+];
 
 class DB extends EventEmitter {
   constructor() {
