@@ -1,10 +1,10 @@
 ﻿  OS05_02x.cpp
-D:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(47,32): warning C4477: "snprintf": в строке форматирования "%x" требуется аргумент типа "unsigned int", но вариативный аргумент "1" имеет тип "DWORD_PTR"
-D:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(47,32): message : рекомендуется использовать "%llx" в строке форматирования
-D:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(47,32): message : рекомендуется использовать "%Ix" в строке форматирования
-D:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(47,32): message : рекомендуется использовать "%I64x" в строке форматирования
-D:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(50,32): warning C4477: "snprintf": в строке форматирования "%x" требуется аргумент типа "unsigned int", но вариативный аргумент "1" имеет тип "DWORD_PTR"
-D:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(50,32): message : рекомендуется использовать "%llx" в строке форматирования
-D:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(50,32): message : рекомендуется использовать "%Ix" в строке форматирования
-D:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(50,32): message : рекомендуется использовать "%I64x" в строке форматирования
-  OS05_02x.vcxproj -> D:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\x64\Debug\OS05_02x.exe
+E:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(47,32): warning C4477: "snprintf": в строке форматирования "%x" требуется аргумент типа "unsigned int", но вариативный аргумент "1" имеет тип "DWORD_PTR"
+E:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(47,32): message : рекомендуется использовать "%llx" в строке форматирования
+E:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(47,32): message : рекомендуется использовать "%Ix" в строке форматирования
+E:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(47,32): message : рекомендуется использовать "%I64x" в строке форматирования
+E:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(50,32): warning C4477: "snprintf": в строке форматирования "%x" требуется аргумент типа "unsigned int", но вариативный аргумент "1" имеет тип "DWORD_PTR"
+E:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(50,32): message : рекомендуется использовать "%llx" в строке форматирования
+E:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(50,32): message : рекомендуется использовать "%Ix" в строке форматирования
+E:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\OS05_02x\OS05_02x.cpp(50,32): message : рекомендуется использовать "%I64x" в строке форматирования
+  OS05_02x.vcxproj -> E:\BSTU\3_course\1term\OperatingSystems\Lab5\OS05_01\x64\Debug\OS05_02x.exe
