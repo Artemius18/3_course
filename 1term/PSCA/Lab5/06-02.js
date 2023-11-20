@@ -1,5 +1,11 @@
 //artempsenko@gmail.com
 //artemijpaf@gmail.com
+
+//task1
+//npm info nodemailer
+//npm install nodemailer
+//npm list nodemailer
+
 const http=require('http');
 const nodemailer=require('nodemailer');
 const url=require('url');

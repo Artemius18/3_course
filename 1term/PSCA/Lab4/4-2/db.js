@@ -34,7 +34,7 @@ const db = [
 class DB extends EventEmitter {
   constructor() {
     super();
-
+    
     this.on('get', (response) => {
       process.nextTick(() => {
         this.getAllRows(response);

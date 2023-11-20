@@ -41,6 +41,7 @@
   </form>
 
   <script>
+    //установка макс даты
     const currentDate = new Date();
     const year = currentDate.getFullYear();
     const month = String(currentDate.getMonth() + 1).padStart(2, '0');
@@ -50,7 +51,7 @@
     document.getElementById('post-bday').setAttribute('max', formattedDate);
 
     document.addEventListener('DOMContentLoaded', function () {
-      getRows(); // Получить данные при загрузке страницы
+      getRows(); 
     });
 
     function getRows() {
@@ -76,20 +77,6 @@
         .then(response => response.json())
     }
 
-    // function updateRow() {
-    //   const id = Number(document.getElementById('put-id').value);
-    //   const name = document.getElementById('put-name').value;
-    //   const bday = document.getElementById('put-bday').value;
-    //     // Выполняем PUT-запрос
-    //     fetch(`/api/db?id=${id}`, {
-    //       method: 'PUT',
-    //       body: JSON.stringify({ name: selectedRow.name, bday: selectedRow.bday }),
-    //       headers: { 'Content-Type': 'application/json' }
-    //     })
-    //     .then(response => response.json());
-    // }
-
-
     function deleteRow() {
       const id = document.getElementById('delete-id').value;
 
@@ -104,7 +91,6 @@
         document.getElementById('put-name').value = selectedRow.name;
         document.getElementById('put-bday').value = selectedRow.bday;
       } else {
-        // Сбрасываем значения полей, если ID не найден
         document.getElementById('put-name').value = '';
         document.getElementById('put-bday').value = '';
       }
@@ -115,7 +101,6 @@
       const name = document.getElementById('put-name').value;
       const bday = document.getElementById('put-bday').value;
       if (id) {
-        // Выполняем PUT-запрос
         fetch(`/api/db?id=${id}`, {
           method: 'PUT',
           body: JSON.stringify({ name, bday }),

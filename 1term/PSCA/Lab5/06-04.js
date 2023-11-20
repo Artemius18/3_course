@@ -1,5 +1,5 @@
-//C:/Users/artem/AppData/Roaming/npm/node_modules/
-const send = require('lab5_package');
+//C:/Users/artem/AppData/Roaming/npm/node_modules
+const send = require('mypackagelab5');
 const http = require('http');
 
 const sender = 'artempsenko@gmail.com';

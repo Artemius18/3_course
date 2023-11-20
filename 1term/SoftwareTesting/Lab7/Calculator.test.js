@@ -39,8 +39,8 @@ describe('Calculator', () => {
       expect(() => calculator.add('a', 2)).toThrow('Invalid input');
     });
   
-    test('throws an error when substact on non-numeric value', () => {
-        expect(() => calculator.add(10, 'ooops')).toThrow('Invalid input');
+    test('throws an error when substracting non-numeric value', () => {
+        expect(() => calculator.subtract(10, 'ooops')).toThrow('Invalid input');
     });
 
     test('throws an error when dividing by NaN', () => {
