@@ -57,10 +57,10 @@ let check_word = 'Sign In';
 async function testLanguageChange() {
     try {
         await driver.get('https://www.mts.by');
-        await new Promise(resolve => setTimeout(resolve, 20000));
+        await driver.manage().setTimeouts({ implicit: 20000 });
 
         let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
-        await new Promise(resolve => setTimeout(resolve, 20000));
+        await driver.manage().setTimeouts({ implicit: 20000 });
         await langButton.click();
 
         let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
