@@ -56,6 +56,7 @@ const By = webDriver.By;
 let check_word = 'Sign In';
 async function testLanguageChange() {
     await driver.get('https://www.mts.by');
+    await driver.sleep(5000);
     let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
     await driver.sleep(1000);
     await langButton.click();
