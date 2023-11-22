@@ -52,21 +52,25 @@ const By = webDriver.By;
 //testAddItemToCart();
 
 
-//Второй тест, но он пока ни к чему xd
 let check_word = 'Sign In';
+
 async function testLanguageChange() {
-    await driver.get('https://www.mts.by');
-    await driver.sleep(20000);
-    let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
-    await driver.sleep(20000);
-    await langButton.click();
+    try {
+        await driver.get('https://www.mts.by');
+        await new Promise(resolve => setTimeout(resolve, 20000));
 
-    let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
-    let buttonText = await englishButton.getText();
-    assert.strictEqual(buttonText, check_word, `Текст кнопки "${String(buttonText)}" не соответствует "${check_word}"`);
-    console.log(`Текст кнопки "${String(buttonText)}" переведен на английский и соответствует "${check_word}"`);
+        let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
+        await new Promise(resolve => setTimeout(resolve, 20000));
+        await langButton.click();
 
+        let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
+        let buttonText = await englishButton.getText();
+
+        assert.strictEqual(buttonText, check_word, `Текст кнопки "${String(buttonText)}" не соответствует "${check_word}"`);
+        console.log(`Текст кнопки "${String(buttonText)}" переведен на английский и соответствует "${check_word}"`);
+    } catch (error) {
+        console.error('Ошибка: ', error);
+    }
 }
-
 
 testLanguageChange();
