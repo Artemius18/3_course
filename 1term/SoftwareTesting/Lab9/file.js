@@ -1,8 +1,8 @@
-// const webDriver = require('selenium-webdriver');
-// const assert = require('assert');
+const webDriver = require('selenium-webdriver');
+const assert = require('assert');
 
-// driver = new webDriver.Builder().forBrowser('chrome').build();
-// const By = webDriver.By;
+driver = new webDriver.Builder().forBrowser('chrome').build();
+const By = webDriver.By;
 
 
 
@@ -53,46 +53,19 @@
 
 
 //Второй тест, но он пока ни к чему xd
-// let check_word = 'Sign In';
-// async function testLanguageChange() {
-//     await driver.get('https://www.mts.by');
-//     let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
-//     await driver.sleep(1000);
-//     await langButton.click();
-
-//     let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
-//     let buttonText = await englishButton.getText();
-//     assert.strictEqual(buttonText, check_word, `Текст кнопки "${String(buttonText)}" не соответствует "${check_word}"`);
-//     console.log(`Текст кнопки "${String(buttonText)}" переведен на английский и соответствует "${check_word}"`);
-
-// }
-
-// testLanguageChange();
-const { Builder, By, until } = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
-
-let options = new chrome.Options();
-options.addArguments("start-maximized");
-options.addArguments("disable-infobars");
-options.addArguments("--disable-extensions");
-
-// Укажите путь к chromedriver.exe
-let chromeService = new chrome.ServiceBuilder('C:\\WebDriver\\chromedriver.exe');  // Убран вызов .build() здесь
-
-let driver = new Builder()
-    .forBrowser('chrome')
-    .setChromeService(chromeService)  // Передайте экземпляр ServiceBuilder напрямую
-    .setChromeOptions(options)
-    .build();
-
+let check_word = 'Sign In';
 async function testLanguageChange() {
-    try {
-        await driver.get('https://www.mts.by');
-        let langButton = await driver.wait(until.elementLocated(By.xpath("/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]")), 10000);
-        await langButton.click();
-    } catch (error) {
-        console.error('Ошибка: ', error);
-    } 
+    await driver.get('https://www.mts.by');
+    let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
+    await driver.sleep(20000);
+    await langButton.click();
+
+    let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
+    let buttonText = await englishButton.getText();
+    assert.strictEqual(buttonText, check_word, `Текст кнопки "${String(buttonText)}" не соответствует "${check_word}"`);
+    console.log(`Текст кнопки "${String(buttonText)}" переведен на английский и соответствует "${check_word}"`);
+
 }
+
 
 testLanguageChange();
