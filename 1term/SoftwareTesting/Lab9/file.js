@@ -78,7 +78,7 @@ options.addArguments("start-maximized");
 options.addArguments("disable-infobars");
 options.addArguments("--disable-extensions");
 
-let driver = new Builder().forBrowser('chrome').setChromeOptions(options).build();
+let driver = new Builder().forBrowser('chrome').setChromeOptions(options, executable_path='C:\\WebDriver\\chromedriver.exe').build();
 
 async function testLanguageChange() {
     try {
