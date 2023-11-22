@@ -53,7 +53,7 @@ VALUES
 
 
 --Вывести информацию обо всех жителях заданного города, разговаривающих на заданном языке
-select *
+select Residents.*, Cities.city_name
 from Residents
 join Cities ON Residents.city_id = Cities.city_id
 where Cities.city_name = 'Минск' and Residents.language_spoken = 'Белорусский';
@@ -71,7 +71,15 @@ JOIN Residents ON Cities.city_id = Residents.city_id
 WHERE Cities.population = 2141000;
 
 --Информация о самом древнем типе жителей
-SELECT *
+SELECT Residents.*, Cities.city_name, Cities.foundation_year
 FROM Residents
-ORDER BY resident_id ASC
-LIMIT 1;
+JOIN Cities ON Residents.city_id = Cities.city_id
+WHERE Cities.foundation_year = (
+    SELECT TOP 1 MIN(Cities.foundation_year)
+    FROM Residents
+    JOIN Cities ON Residents.city_id = Cities.city_id
+    GROUP BY Residents.language_spoken
+)
+ORDER BY Residents.resident_id;
+
+
