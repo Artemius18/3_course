@@ -68,8 +68,6 @@
 // }
 
 // testLanguageChange();
-
-
 const { Builder, By, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 
@@ -78,7 +76,14 @@ options.addArguments("start-maximized");
 options.addArguments("disable-infobars");
 options.addArguments("--disable-extensions");
 
-let driver = new Builder().forBrowser('chrome').setChromeOptions(options, executable_path='C:\\WebDriver\\chromedriver.exe').build();
+// Укажите путь к chromedriver.exe
+let chromeService = new chrome.ServiceBuilder('C:\\WebDriver\\chromedriver.exe');  // Убран вызов .build() здесь
+
+let driver = new Builder()
+    .forBrowser('chrome')
+    .setChromeService(chromeService)  // Передайте экземпляр ServiceBuilder напрямую
+    .setChromeOptions(options)
+    .build();
 
 async function testLanguageChange() {
     try {
