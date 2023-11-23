@@ -1,9 +1,9 @@
-const webDriver = require('selenium-webdriver');
-const assert = require('assert');
+// const webDriver = require('selenium-webdriver');
+// //const assert = require('assert');
 
-driver = new webDriver.Builder().forBrowser('chrome').build();
-const By = webDriver.By;
-const until = webDriver.until;
+// driver = new webDriver.Builder().forBrowser('chrome').build();
+// const By = webDriver.By;
+// const until = webDriver.until;
 
 
 // async function testAddItemToCart() {
@@ -49,30 +49,67 @@ const until = webDriver.until;
 //     }
 // }
 
-//testAddItemToCart();
+// testAddItemToCart();
 
 
-let check_word = 'Sign In';
 
-async function testLanguageChange() {
-    try {
-        await driver.get('https://www.mts.by');
-        await driver.manage().setTimeouts({ implicit: 20000 });
+//Для локальной демонстрации
+// async function testLanguageChange() {
+//     let check_word = 'Sign In';
+//     try {
+//         await driver.get('https://www.mts.by');
+//         let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
+//         await driver.wait(until.elementIsVisible(langButton), 20000);
+//         await langButton.click();
 
-        let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
-        await driver.wait(until.elementIsVisible(langButton), 20000);
-        //await driver.manage().setTimeouts({ implicit: 20000 });
-        await langButton.click();
+//         let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
+//         let buttonText = await englishButton.getText();
 
-        let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
-        await driver.wait(until.elementIsVisible(englishButton), 20000);
-        let buttonText = await englishButton.getText();
+//         assert.strictEqual(buttonText, check_word, `Текст кнопки "${String(buttonText)}" не соответствует "${check_word}"`);
+//         console.log(`Текст кнопки "${String(buttonText)}" переведен на английский и соответствует "${check_word}"`);
+//     } catch (error) {
+//         console.error('Ошибка: ', error);
+//     }
+// }
 
-        assert.strictEqual(buttonText, check_word, `Текст кнопки "${String(buttonText)}" не соответствует "${check_word}"`);
-        console.log(`Текст кнопки "${String(buttonText)}" переведен на английский и соответствует "${check_word}"`);
-    } catch (error) {
-        console.error('Ошибка: ', error);
-    }
+// testLanguageChange();
+
+
+
+const webDriver = require('selenium-webdriver');
+const { Builder } = require('selenium-webdriver');
+const By = webDriver.By;
+const until = webDriver.until;
+const assert = require('chai').assert;
+
+async function LanguageChangeTest() {
+  let driver = await new Builder().forBrowser('chrome').build();
+
+  let testResult = true;
+
+  try {
+    await driver.get('https://www.mts.by');
+
+    let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
+    await driver.wait(until.elementIsVisible(langButton), 20000);
+    await langButton.click();
+
+    let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
+    let buttonText = await englishButton.getText();
+
+    assert.strictEqual(buttonText, 'Sign In', 'Текст кнопки не соответствует ожидаемому');
+  } catch {
+  } finally {
+    await driver.quit();
+    return testResult;
+  }
 }
 
-testLanguageChange();
+describe('Language Change Test', function() {
+  this.timeout(20000); 
+
+  it('Verify language change button', async () => {
+    let result = await LanguageChangeTest();
+    assert.isTrue(result, 'Test isnt completed: error when trying to change language');
+  });
+});
