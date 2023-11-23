@@ -52,30 +52,6 @@
 // testAddItemToCart();
 
 
-
-//Для локальной демонстрации
-// async function testLanguageChange() {
-//     let check_word = 'Sign In';
-//     try {
-//         await driver.get('https://www.mts.by');
-//         let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
-//         await driver.wait(until.elementIsVisible(langButton), 20000);
-//         await langButton.click();
-
-//         let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
-//         let buttonText = await englishButton.getText();
-
-//         assert.strictEqual(buttonText, check_word, `Текст кнопки "${String(buttonText)}" не соответствует "${check_word}"`);
-//         console.log(`Текст кнопки "${String(buttonText)}" переведен на английский и соответствует "${check_word}"`);
-//     } catch (error) {
-//         console.error('Ошибка: ', error);
-//     }
-// }
-
-// testLanguageChange();
-
-
-
 const webDriver = require('selenium-webdriver');
 const { Builder } = require('selenium-webdriver');
 const By = webDriver.By;
@@ -91,13 +67,13 @@ async function LanguageChangeTest() {
     await driver.get('https://www.mts.by');
 
     let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
-    await driver.wait(until.elementIsVisible(langButton), 20000);
+    //await driver.wait(until.elementIsVisible(langButton), 20000);
     await langButton.click();
 
     let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
     let buttonText = await englishButton.getText();
 
-    assert.strictEqual(buttonText, 'Sign In', 'Текст кнопки не соответствует ожидаемому');
+    assert.strictEqual(buttonText, 'Sign In', 'Button text is not as expected');
   } catch {
   } finally {
     await driver.quit();
@@ -106,7 +82,7 @@ async function LanguageChangeTest() {
 }
 
 describe('Language Change Test', function() {
-  this.timeout(120000); 
+  this.timeout(120000); //для локальной демонстрации 15000
 
   it('Verify language change button', async () => {
     let result = await LanguageChangeTest();
