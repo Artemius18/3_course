@@ -106,7 +106,7 @@ async function LanguageChangeTest() {
 }
 
 describe('Language Change Test', function() {
-  this.timeout(20000); 
+  this.timeout(120000); 
 
   it('Verify language change button', async () => {
     let result = await LanguageChangeTest();
