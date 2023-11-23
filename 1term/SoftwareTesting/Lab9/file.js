@@ -3,7 +3,7 @@ const assert = require('assert');
 
 driver = new webDriver.Builder().forBrowser('chrome').build();
 const By = webDriver.By;
-
+const until = webDriver.until;
 
 
 // async function testAddItemToCart() {
@@ -60,11 +60,12 @@ async function testLanguageChange() {
         await driver.manage().setTimeouts({ implicit: 20000 });
 
         let langButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]'));
-        await driver.wait(until.elementIsVisible(revealed), 20000);
+        await driver.wait(until.elementIsVisible(langButton), 20000);
         //await driver.manage().setTimeouts({ implicit: 20000 });
         await langButton.click();
 
         let englishButton = await driver.findElement(By.xpath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button'));
+        await driver.wait(until.elementIsVisible(englishButton), 20000);
         let buttonText = await englishButton.getText();
 
         assert.strictEqual(buttonText, check_word, `Текст кнопки "${String(buttonText)}" не соответствует "${check_word}"`);
