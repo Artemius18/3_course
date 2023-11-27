@@ -1,5 +1,5 @@
 const webdriver = require('selenium-webdriver');
-const { By } = require('selenium-webdriver');
+const { By, until } = require('selenium-webdriver');
 
 class BasePage {
     constructor() {
