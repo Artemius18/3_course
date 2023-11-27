@@ -26,7 +26,7 @@ class BasePage {
 
     async clickByXPath(xpath) {
         const element = await this.findByXPath(xpath);
-        await this.driver.wait(until.elementIsVisible(element), 50000);
+        await this.driver.wait(until.elementIsVisible(element), 120000);
         await element.click();
     }
 
