@@ -1,0 +1,1 @@
+alert('hello from 1.js!'); 

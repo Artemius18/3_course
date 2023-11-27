@@ -61,8 +61,6 @@ const assert = require('chai').assert;
 async function LanguageChangeTest() {
   let driver = await new Builder().forBrowser('chrome').build();
 
-  let testResult = true;
-
   try {
     await driver.get('https://www.mts.by');
 
@@ -75,9 +73,10 @@ async function LanguageChangeTest() {
 
     assert.strictEqual(buttonText, 'Sign In', 'Button text is not as expected');
   } catch {
+    return false;
   } finally {
-    await driver.quit();
-    return testResult;
+    //await driver.quit();
+    return true;
   }
 }
 
