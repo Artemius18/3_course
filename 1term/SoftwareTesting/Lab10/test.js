@@ -1,5 +1,5 @@
 const assert = require('chai').assert;
-const LanguageChangePage = require('./LanguageChangePage'); // Изменение пути
+const LanguageChangePage = require('./LanguageChangePage'); 
 
 describe('Language Change Test', function() {
     this.timeout(120000);
