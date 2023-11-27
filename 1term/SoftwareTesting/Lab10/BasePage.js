@@ -1,6 +1,7 @@
 const webdriver = require('selenium-webdriver');
 const { By, until } = require('selenium-webdriver');
 
+
 class BasePage {
     constructor() {
         this.driver = new webdriver.Builder().forBrowser('chrome').build();
@@ -26,7 +27,7 @@ class BasePage {
 
     async clickByXPath(xpath) {
         const element = await this.findByXPath(xpath);
-        await this.driver.wait(until.elementIsVisible(element), 120000);
+        await this.driver.wait(until.elementIsEnabled(element), 120000);
         await element.click();
     }
 
