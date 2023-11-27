@@ -88,3 +88,5 @@ describe('Language Change Test', function() {
     assert.isTrue(result, 'Test isnt completed: error when trying to change language');
   });
 });
+
+

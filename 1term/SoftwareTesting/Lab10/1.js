@@ -4,7 +4,9 @@ const assert = require('chai').assert;
 class HomePage {
   constructor(driver) {
     this.driver = driver;
-    this.langButtonLocator = By.xpath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]');
+    //
+    ///html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]
+    this.langButtonLocator = By.css('body > div.layout.layout--default > header > div.top > div > div > div.top-toggle > div > div > a:nth-child(2)');
   }
 
   async navigateTo() {
