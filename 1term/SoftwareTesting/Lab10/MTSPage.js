@@ -14,7 +14,7 @@ class MtsPage {
 
   async clickButton() {
     let langButton = await this.driver.findElement(By.xpath(this.langButtonXPath));
-    await this.driver.wait(until.elementIsVisible(langButton), 20000);
+    //await this.driver.wait(until.elementIsVisible(langButton), 20000);
     await langButton.click();
   }
 
