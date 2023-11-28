@@ -1,8 +1,4 @@
 const { Builder, By, until } = require('selenium-webdriver');
-const { Options } = require('selenium-webdriver/chrome'); // For older versions (< v4)
-// For newer versions (v4 and above), use the following import:
-// const { Builder, By, Options, until } = require('selenium-webdriver');
-
 const assert = require('chai').assert;
 
 class MtsPage {
@@ -18,8 +14,7 @@ class MtsPage {
 
   async clickButton() {
     let langButton = await this.driver.findElement(By.xpath(this.langButtonXPath));
-    await this.driver.wait(until.elementIsVisible(langButton), 20000);
-    await this.driver.wait(until.elementIsEnabled(langButton), 20000);
+    //await this.driver.wait(until.elementIsVisible(langButton), 20000);
     await langButton.click();
   }
 
@@ -33,13 +28,7 @@ describe('Language Change Test', function() {
   this.timeout(120000);
 
   it('Verify language change button', async () => {
-    let driver = await new Builder()
-      .forBrowser('chrome')
-      .setChromeOptions(new Options().headless()) // For older versions (< v4)
-      // For newer versions (v4 and above), use the following line:
-      // .setChromeOptions(new Options().headless())
-      .build();
-
+    let driver = await new Builder().forBrowser('chrome').setChromeOptions(new Chrome.Options().headless()).build();
     let mtsPage = new MtsPage(driver);
 
     try {
