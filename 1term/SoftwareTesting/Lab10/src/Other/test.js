@@ -2,7 +2,7 @@ const assert = require('chai').assert;
 const LanguagePage = require('../PageObjects/LanguagePage');
 
 describe('Language Change Test', function () {
-    this.timeout(50000);
+    this.timeout(120000);
 
     it('Verify language change button', async function () {
         const result = await LanguagePage.performLanguageChange();

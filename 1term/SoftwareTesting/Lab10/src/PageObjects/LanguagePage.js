@@ -6,7 +6,7 @@ class LanguagePage extends BasePage {
             await this.goToUrl('https://www.mts.by');
             const langButton = await this.findElementByXPath('/html/body/div[6]/header/div[1]/div/div/div[2]/div/div/a[2]');
             await langButton.click();
-            await this.driver.sleep(30000);
+            //await this.driver.sleep(30000);
             const englishButton = await this.findElementByXPath('/html/body/div[6]/header/div[2]/div/div/div[2]/div/button');
             const buttonText = await englishButton.getText();
             console.log('Button Text:', buttonText);
