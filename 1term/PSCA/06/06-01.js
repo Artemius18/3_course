@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 const serverSockets = new Set();
-const {Service} = require('./m0600');
+const {Service} = require('./service');
 
 const server = http.createServer();
 
