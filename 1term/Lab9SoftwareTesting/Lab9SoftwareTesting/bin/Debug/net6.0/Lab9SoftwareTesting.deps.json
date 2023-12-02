@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "LanguageChangeTestLab9C#/1.0.0": {
+      "Lab9SoftwareTesting/1.0.0": {
         "dependencies": {
           "Microsoft.NET.Test.Sdk": "17.5.0",
           "NUnit": "3.13.3",
@@ -16,7 +16,7 @@
           "coverlet.collector": "3.2.0"
         },
         "runtime": {
-          "LanguageChangeTestLab9C#.dll": {}
+          "Lab9SoftwareTesting.dll": {}
         }
       },
       "coverlet.collector/3.2.0": {},
@@ -367,7 +367,7 @@
     }
   },
   "libraries": {
-    "LanguageChangeTestLab9C#/1.0.0": {
+    "Lab9SoftwareTesting/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
