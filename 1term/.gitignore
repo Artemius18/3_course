@@ -6,24 +6,11 @@
 .DS_Store
 Thumbs.db
 
-# Файлы и папки IDE и редакторов
-.idea/
-.vscode/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
+
 
 # Файлы JavaScript
 node_modules/
 
-# Файлы C#
-[Bb]in/
-[Oo]bj/
-*.user
-*.userosscache
-*.suo
-*.dll
 
 # Файлы Java
 target/
