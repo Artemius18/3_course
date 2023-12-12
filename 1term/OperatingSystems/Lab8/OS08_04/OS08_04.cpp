@@ -1,43 +1,40 @@
-﻿#include <windows.h>
-#include <iostream>
+﻿#include <iostream>
+#include <windows.h>
 
 void sh(HANDLE heap) {
+    SetConsoleOutputCP(1251);
     PROCESS_HEAP_ENTRY entry;
     entry.lpData = NULL;
     SIZE_T totalSize = 0, allocatedSize = 0, unallocatedSize = 0;
 
-    while (HeapWalk(heap, &entry) != 0) {
-        if (entry.wFlags & PROCESS_HEAP_REGION) {
-            totalSize += entry.Region.dwCommittedSize;
-            allocatedSize += entry.Region.dwCommittedSize - entry.Region.dwUnCommittedSize;
-            unallocatedSize += entry.Region.dwUnCommittedSize;
+    while (HeapWalk(heap, &entry) != FALSE) {
+        totalSize += entry.cbData;
+        if (entry.wFlags & PROCESS_HEAP_ENTRY_BUSY) {
+            allocatedSize += entry.cbData;
+        }
+        else {
+            unallocatedSize += entry.cbData;
         }
     }
 
-    std::cout << "Total heap size: " << totalSize << " bytes\n";
-    std::cout << "Allocated memory size: " << allocatedSize << " bytes\n";
-    std::cout << "Unallocated memory size: " << unallocatedSize << " bytes\n";
+    std::cout << "Общий размер heap: " << totalSize << "\n";
+    std::cout << "Размер распределенной области памяти heap: " << allocatedSize << "\n";
+    std::cout << "Размер нераспределенной области памяти heap: " << unallocatedSize << "\n";
 }
 
 int main() {
     HANDLE heap = GetProcessHeap();
-    if (heap == NULL) {
-        std::cerr << "Failed to get process heap\n";
-        return 1;
-    }
-
-    std::cout << "Before array allocation:\n";
     sh(heap);
 
-    int* array = new int[6990000];
+    const int ARRAYSIZE = 300000;
+    int* array = new int[ARRAYSIZE];
 
-    //общий размер кучи и размер распределенной памяти увеличились
-    //размер нераспределенной памяти может уменьшиться или остаться неизменным, в зависимости от того, была ли необходима 
-    // дополнительная память для удовлетворения запроса на выделение памяти
-    std::cout << "\nAfter array allocation:\n";
     sh(heap);
 
     delete[] array;
-
     return 0;
 }
+
+//Результаты показывают, что после создания массива общий размер кучи, а также размер распределенной области памяти увеличиваются.
+//Это связано с тем, что массив int занимает место в куче.После удаления массива эти значения должны вернуться к исходным.
+//Это подтверждает, что операции выделения и освобождения памяти работают корректно.
