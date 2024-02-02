@@ -6,6 +6,6 @@ const wss = new WebSocket.Server({ port: 4000 });
 
 wss.on('connection', ws => {
     const duplex = WebSocket.createWebSocketStream(ws, { encoding: 'utf8' });
-    const wfile = fs.createWriteStream('./text.txt');
+    const wfile = fs.createWriteStream('./file.txt');
     duplex.pipe(wfile);
 });

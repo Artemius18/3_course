@@ -20,5 +20,4 @@ wss.on('connection', ws => {
                 timestamp: Date.now()
             }))
     }, 5000);
-
 });
