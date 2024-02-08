@@ -1,0 +1,56 @@
+/ComputerMultimediaSystems
+/JAVA
+/SystemProgramming
+
+# Файлы и папки операционной системы
+.DS_Store
+Thumbs.db
+
+
+
+# Файлы JavaScript
+node_modules/
+
+
+# Файлы Java
+target/
+*.class
+
+# Файлы C++
+*.o 
+*.out 
+*.exe 
+*.obj 
+*.a 
+*.lof 
+*.log 
+*.toc 
+*.aux 
+*.idx 
+*.synctex.gz 
+*.ind 
+*.ilg 
+*.dvi 
+.build/
+
+# Файлы Unity
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ibrary/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Другие файлы и папки, которые следует игнорировать
+.env
+
+# Конфиденциальные данные и личные настройки (замените на свои значения)
+config.json
+secrets.json
+
+*.zip
+*.rar
