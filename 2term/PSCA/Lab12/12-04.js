@@ -23,7 +23,9 @@ async function benchmark() {
 
   const startHGet = Date.now();
   for (let i = 0; i < 10000; i++) {
+    //const res = 
     await redis.hget(`hash${i}`, 'field');
+    //console.log(`hash${i}: ${res}`);
   }
   const endHGet = Date.now();
   console.log(`Время выполнения 10000 запросов hget: ${endHGet - startHGet}ms`);

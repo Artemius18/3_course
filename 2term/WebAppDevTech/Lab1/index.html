@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function getInfo() {
+        console.log('Hello, world!');
+        var infoContainer = document.getElementById("browserInfo");
+
+        infoContainer.innerHTML += "<strong>appCodeName:</strong> " + navigator.appCodeName + "<br>";
+        infoContainer.innerHTML += "<strong>appName:</strong> " + navigator.appName + "<br>";
+        infoContainer.innerHTML += "<strong>appVersion:</strong> " + navigator.appVersion + "<br>";
+        infoContainer.innerHTML += "<strong>userAgent:</strong> " + navigator.userAgent;
+    }
+</script>
+
+<body>
+    <h2>Лабораторная работа 1</h2>
+    <p>
+        <a href="https://belstu.by">
+            БГТУ
+        </a>
+    </p>
+    <button onclick="getInfo()">Информация о браузере</button>
+
+    <div id="browserInfo"></div>
+</body>
+
+</html>
