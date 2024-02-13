@@ -1,0 +1,6 @@
+The Internet is a global network connecting millions of computers. The Internet enables computers to send one another small packets of digital data. For that to work, they use a protocol called TCP/IP and every computer is given an address or IP number.
+To use the Internet, you need the modem. The modem converts the digital signals stored in the computer into analogue signals. There are two basic types of modem: external with a cable that is connected to the computer in the USB port, and internal, an expansion card inside the computer.
+At first most computers used a dial-up telephone connection. Now a broadband connection and a high data transmission connection.
+The Internet consists of multiple data systems. The World Wide Web, a collection of files or pages containing links to other documents on the Net.
+Most Internet services are now integrated on the Web. For example, e-mail, chat, instant messaging and video conference.
+In conclusion, I’d like to say that IT helps communicate with distant relatives, and many processes are automated: for example, we can place an online order. On the other hand, communication in person disappears, people become lazier and passive.
