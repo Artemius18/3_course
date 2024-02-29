@@ -1,0 +1,14 @@
+{
+    "dialect": "mssql",
+    "host": "localhost",
+    "port": 1433, 
+    "additional": {
+      "timestamps": false 
+    },
+    "caseProp": "l",
+    "caseFile": "p",
+    "singularize": false, 
+    "caseModel": "p",
+    "lang": "js"
+  }
+  
