@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #4CAF50;
+            }
+
+            button {
+
+                display: inline-block;
+
+            }
+
+            #page-number {
+                display: inline-block;
+            }
+
+            .pagination {
+                margin-top: 20px;
+            }
+
+            .pagination button {
+                display: inline-block;
+                margin: 0 5px;
+            }
+        </style>
+    </head>
+<script defer>
+
+    document.addEventListener("DOMContentLoaded", async() =>{
+        await getPulpits(0);
+    });
+
+    async function getPulpits(mode) {
+        const pageNumberElement = document.querySelector("#page-number");
+        const tableElement = document.querySelector("#tbody");
+
+        let pageNumber = +pageNumberElement.innerText;
+
+
+        if (!(pageNumber === 0 && mode === -1)) {
+            pageNumber += mode;
+            const data = await fetch(`http://localhost:3000/api/getPulpitsByCount/${pageNumber}`);
+            const result = await data.json();
+
+            console.log(result);
+
+            if (result.length === 0) {
+                return;
+            }
+            else {
+                tableElement.innerHTML = "";
+
+                result.forEach(x => {
+                    const {pulpit, pulpit_name, faculty, _count} = x;
+                    console.log(x);
+
+
+                    const pulpitTd = document.createElement("td");
+                    const pulpitNameTd = document.createElement("td");
+                    const facultyTd = document.createElement("td");
+                    const countTd = document.createElement("td");
+
+                    const tr = document.createElement("tr");
+
+                    pulpitTd.textContent = pulpit;
+                    pulpitNameTd.textContent = pulpit_name;
+                    facultyTd.textContent = faculty;
+                    countTd.textContent = _count.Teacher;
+
+                    tr.append(pulpitTd,pulpitNameTd,facultyTd,countTd);
+                    tableElement.append(tr);
+                });
+
+                pageNumberElement.innerText = pageNumber;
+            }
+        }
+
+    }
+</script>
+<body>
+
+<table>
+    <thead>
+    <td>PULPIT</td>
+    <td>PULPIT NAME</td>
+    <td>FACULTY</td>
+    <td>TEACHERS COUNT</td>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+</table>
+
+<div class="pagination">
+    <button onclick="getPulpits(-1)">Previous</button>
+    <div id="page-number">0</div>
+    <button onclick="getPulpits(+1)">Next</button>
+</div>
+
+</body>
+
+
+</html>

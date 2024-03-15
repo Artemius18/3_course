@@ -1,0 +1,16 @@
+﻿<Window x:Class="WPF_SUM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_SUM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Name="XValue" Margin="229,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="#FFA58181"/>
+        <TextBox HorizontalAlignment="Left" Name="YValue" Margin="400,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Background="#FFA58181"/>
+        <Button Click="Button_Click" Content="Button" HorizontalAlignment="Left" Margin="360,217,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Name="Result" Margin="347,142,0,0" TextWrapping="Wrap" Text="Результат" VerticalAlignment="Top" Foreground="Red"/>
+
+    </Grid>
+</Window>

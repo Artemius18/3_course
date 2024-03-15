@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab14</title>
+        <!-- <link rel="stylesheet" href="bootstrap.css"> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container d-flex align-items-start justify-content-between">
+
+            <div class="mb-3 me-5 mt-5" style="width: 53%;">
+                <div class="container d-flex align-items-start justify-content-evenly">
+                    <button id="prev" type="button" class="btn btn-link" style="visibility: hidden;">
+                        &laquo;
+                    </button>
+                    <p id="page" style="visibility: hidden;" disabled>1</p>
+                    <button id="next" type="button" class="btn btn-link" style="visibility: hidden;">
+                        &raquo;
+                    </button>
+                </div>
+                <div id="result"></div>
+            </div>
+
+            <div class="row pb-2" style="width: 40%;">
+                <h1 class="mt-4 ms-4">Lab14</h1>
+                <button type="button" class="btn btn-success mt-3" id="get">GET</button>
+                <button type="button" class="btn btn-primary mt-2" id="post">POST</button>
+                <button type="button" class="btn btn-warning mt-2" id="put">PUT</button>
+                <button type="button" class="btn btn-danger mt-2 mb-2" id="delete">DELETE</button>
+    
+                <div class="form-group mt-4">
+                    <label for="pulpit">Pulpit</label>
+                    <input class="form-control" type="text" name="pulpit" id="input_pulpit">
+                </div>
+    
+                <div class="form-group mt-2">
+                    <label for="pulpit_name">Pulpit Name</label>
+                    <input class="form-control" type="text" name="pulpit_name" id="input_pulpit_name">
+                </div>
+    
+                <div class="form-group mt-2">
+                    <label for="faculty">Faculty</label>
+                    <input class="form-control" type="text" name="faculty" id="input_faculty">
+                </div>
+
+                <div class="form-group mt-2">
+                    <label for="faculty_name">Faculty Name</label>
+                    <input class="form-control" type="text" name="faculty_name" id="input_faculty_name">
+                </div>
+
+            </div>
+            <script>
+                const baseUrl="/api/pulpits/"
+                const result=document.getElementById("result");
+                const page=document.getElementById("page");
+                let arrayOfPulpits=[];
+                let clickCounts=0;
+                let start=0;
+                let end=10;
+
+                $("#next").click(function next(){
+                    clickCounts++;
+                    let arr=arrayOfPulpits.slice(start+(clickCounts+1)*10,end+(clickCounts+1)*10);
+
+                    page.innerHTML=clickCounts+1;
+                    result.innerHTML=
+                        '<pre style="white-space: pre-wrap">'+
+                            JSON.stringify(arrayOfPulpits.slice(start+clickCounts*10,end+clickCounts*10),null,4)    
+                        +'</pre>';
+                    
+                    if(arr.length===0){
+                        $("#next").css("visibility","hidden");
+                    }
+                    else{
+                        $("#next").css("visibility","visible");
+                    }
+                    $("#prev").css("visibility","visible");
+                });
+                $("#prev").click(function prev(){
+                    clickCounts--;
+                    let arr=arrayOfPulpits.slice(start+(clickCounts-1)*10,end+(clickCounts-1)*10);
+
+                    page.innerHTML=clickCounts+1;
+                    result.innerHTML=
+                        '<pre style="white-space: pre-wrap">'+
+                            JSON.stringify(arrayOfPulpits.slice(start+clickCounts*10,end+clickCounts*10),null,4)    
+                        +'</pre>';
+                    
+                    if(arr.length===0){
+                        $("#prev").css("visibility","hidden");
+                    }
+                    else{
+                        $("#prev").css("visibility","visible");
+                    }
+                    $("#next").css("visibility","visible");
+                });
+
+                $("#get").click(function get(){
+                    clickCounts=0;
+
+                    fetch(baseUrl).then(resp=>resp.json()).then(respText=>{
+                        arrayOfPulpits=respText;
+                        const length=arrayOfPulpits.length;
+
+                        result.innerHTML=
+                            '<pre style="white-space: pre-wrap">'+
+                                JSON.stringify(arrayOfPulpits.slice(start,end),null,4)    
+                            +'</pre>';
+                        $("#next").css("visibility","visible");
+                        $("#page").css("visibility","visible");
+                        $("#prev").css("visibility","hidden");
+                        page.innerHTML=1;
+                    })
+                })
+
+        $("#post").click(function post() {
+                    $("#next").css("visibility", "hidden");
+                    $("#prev").css("visibility", "hidden");
+                    $("#page").css("visibility", "hidden");
+                    clickCounts = 0;
+
+                    const data = {
+                        PULPIT: $("#input_pulpit").val(),
+                        PULPIT_NAME: $("#input_pulpit_name").val(),
+                        FACULTY: $("#input_faculty").val(),
+                        FACULTY_NAME: $("#input_faculty_name").val()
+                    }
+                    if (data.FACULTY == '' || data.PULPIT == '' || data.PULPIT_NAME == '') {
+                        result.innerHTML = 'Fill all inputs!';
+                        return;
+                    }
+
+                    fetch(baseUrl, {
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: { 'content-type': 'application/json' }
+                    })
+                        .then(responce => responce.json())
+                        .then(responseText => {
+                            result.innerHTML =
+                                '<pre style="white-space: pre-wrap">' +
+                                JSON.stringify(responseText, null, 4) +
+                                '</pre>';
+                        });
+            })
+            $("#put").click(function post() {
+                $("#next").css("visibility", "hidden");
+                $("#prev").css("visibility", "hidden");
+                $("#page").css("visibility", "hidden");
+                clickCounts = 0;
+
+                const data = {
+                    PULPIT: $("#input_pulpit").val(),
+                    PULPIT_NAME: $("#input_pulpit_name").val(),
+                    FACULTY: $("#input_faculty").val()
+                }
+                if (data.FACULTY == '' || data.PULPIT == '' || data.PULPIT_NAME == '') {
+                    result.innerHTML = 'Fill all inputs';
+                    return;
+                }
+
+                fetch(baseUrl, {
+                    method: 'PUT',
+                    body: JSON.stringify(data),
+                    headers: { 'content-type': 'application/json' }
+                })
+                    .then(responce => responce.json())
+                    .then(responseText => {
+                        result.innerHTML =
+                            '<pre style="white-space: pre-wrap">' +
+                            JSON.stringify(responseText, null, 4) +
+                            '</pre>';
+                    });
+            });
+
+
+
+            $("#delete").click(function post() {
+                $("#next").css("visibility", "hidden");
+                $("#prev").css("visibility", "hidden");
+                $("#page").css("visibility", "hidden");
+                clickCounts = 0;
+
+                const pulpit = $("#input_pulpit").val();
+                if (pulpit == '') {
+                    result.innerHTML = 'Enter pulpit please';
+                    return;
+                }
+
+                fetch(baseUrl + pulpit, {
+                    method: 'DELETE',
+                    headers: { 'content-type': 'application/json' }
+                })
+                    .then(responce => responce.json())
+                    .then(responseText => {
+                        result.innerHTML =
+                            '<pre style="white-space: pre-wrap">' +
+                            JSON.stringify(responseText, null, 4) +
+                            '</pre>';
+                    });
+            })
+
+            $(document).on({
+                mouseenter: function () { $('#input_faculty_name').prop("disabled", (_, val) => val = true); },
+                mouseleave: function () { $('#input_faculty_name').prop("disabled", (_, val) => val = false); }
+            }, ".nameDisable");
+            </script>
+        </div>
+    </body>
+</html>

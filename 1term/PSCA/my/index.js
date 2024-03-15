@@ -215,6 +215,8 @@ sql.connect(config).then(pool => {
         });
     });
 
+
+
     app.delete('/api/faculties/:id', (req, res) => {
         pool.request().query(`DELETE FROM FACULTY WHERE FACULTY = N'${req.params.id}'`, (err, result) => {
             if (err) {

@@ -7,14 +7,16 @@ Original file is located at
     https://colab.research.google.com/drive/1-zHyWfiq0YWaJIy99gbqPi2u7mTMya-Y
 """
 
-from math import sqrt
+from math import sqrt, log
 
 def print_primes(a, b):
+  amount = 0
   for x in range(a, b + 1):
     if(is_prime(x)):
-      print(x)
+      amount += 1
+      print(x, end=', ')
+  print(f'\nКол-во простых чисел в интервале {a, b} равно {amount}')
 
-# тривиальный тест простоты
 def is_prime(N):
   i = 2
   while i <= sqrt(N):
@@ -23,19 +25,19 @@ def is_prime(N):
     i += 1
   return True
 
-n = 433
-m = 399
-#print_primes(2, n)
-#print_primes(m, n)
-
 
 def Euclid(a, b):
    while b != 0:
         a, b = b, a % b
    return a
 
+n = 433
+m = 399
+print_primes(2, n)
 
-def gcd_three_numbers(a, b, c):
-    return Euclid(Euclid(a, b), c)
+print(f'Результат операции n/ln(n) равен {n/log(n):.3f}\n')
+print_primes(m, n)
 
-gcd_three_numbers(48, 120, 64)
+a = 120
+b = 64
+print(f'НОД чисел {a, b} равен {Euclid(a, b)}') # для трех чисел Euclid(Euclid(a, b), c)

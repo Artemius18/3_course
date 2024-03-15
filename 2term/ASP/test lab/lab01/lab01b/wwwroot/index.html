@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket</title>
+</head>
+<body>
+    <button id="startButton">Start</button>
+    <button id="stopButton" disabled>Stop</button>
+    <div id="output"></div>
+    <div id="errorOutput" class="error"></div>
+
+    <script>
+        const startButton = document.getElementById('startButton');
+        const stopButton = document.getElementById('stopButton');
+        const output = document.getElementById('output');
+
+        let socket;
+
+        startButton.addEventListener('click', () => {
+            socket = new WebSocket('ws://localhost:5260/websocket');
+            socket.onopen = () => {
+                errorOutput.textContent = ''; // Очищаем сообщение об ошибке при успешном подключении
+                startButton.disabled = true;
+                stopButton.disabled = false;
+            };
+            socket.onmessage = (event) => {
+                const message = event.data;
+                output.innerHTML += `<p class="message">${message}</p>`;
+            };
+        });
+
+        stopButton.addEventListener('click', () => {
+            if (socket) {
+                socket.close();
+                startButton.disabled = false;
+                stopButton.disabled = true;
+            }
+        });
+    </script>
+</body>
+</html>
