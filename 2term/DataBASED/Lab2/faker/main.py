@@ -5,9 +5,8 @@ import random
 fake = Faker()
 data = []
 
-for i in range(1000):
+for i in range(100):
     instrument = {
-        "InstrumentID": i + 1,
         "InstrumentName": fake.name() + ' ' + fake.word(),
         "CategoryID": random.randint(1, 5),
         "ManufacturerID": random.randint(1, 29),

@@ -103,12 +103,6 @@ app.get('/api/auditoriumtypes/:id/auditoriums', async (req, res) => {
   }
 });
 
-//GET	api/auditoriumsWithComp1
-
-//GET	api/puplitsWithoutTeachers
-
-//GET	api/pulpitsWithVladimir
-
 //GET	api/auditoriumsSameCount
 
 app.post('/api/faculties', async (req, res) => {

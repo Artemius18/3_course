@@ -4,36 +4,44 @@
     <title>WebSocket</title>
 </head>
 <body>
+    <!-- Кнопки для управления подключением -->
     <button id="startButton">Start</button>
     <button id="stopButton" disabled>Stop</button>
+    <!-- Контейнеры для вывода сообщений и ошибок -->
     <div id="output"></div>
     <div id="errorOutput" class="error"></div>
 
     <script>
+        // Получаем ссылки на кнопки и контейнер для вывода сообщений
         const startButton = document.getElementById('startButton');
         const stopButton = document.getElementById('stopButton');
         const output = document.getElementById('output');
 
-        let socket;
+        let socket; // Переменная для хранения объекта WebSocket
 
+        // Обработчик для кнопки "Start"
         startButton.addEventListener('click', () => {
+            // Создаем новое соединение через веб-сокет
             socket = new WebSocket('ws://localhost:5260/websocket');
+            // Обработчик успешного открытия соединения
             socket.onopen = () => {
                 errorOutput.textContent = ''; // Очищаем сообщение об ошибке при успешном подключении
-                startButton.disabled = true;
-                stopButton.disabled = false;
+                startButton.disabled = true; // Отключаем кнопку "Start"
+                stopButton.disabled = false; // Включаем кнопку "Stop"
             };
+            // Обработчик получения сообщения от сервера
             socket.onmessage = (event) => {
                 const message = event.data;
-                output.innerHTML += `<p class="message">${message}</p>`;
+                output.innerHTML += `<p class="message">${message}</p>`; // Выводим сообщение
             };
         });
 
+        // Обработчик для кнопки "Stop"
         stopButton.addEventListener('click', () => {
             if (socket) {
-                socket.close();
-                startButton.disabled = false;
-                stopButton.disabled = true;
+                socket.close(); // Закрываем соединение
+                startButton.disabled = false; // Включаем кнопку "Start"
+                stopButton.disabled = true; // Отключаем кнопку "Stop"
             }
         });
     </script>

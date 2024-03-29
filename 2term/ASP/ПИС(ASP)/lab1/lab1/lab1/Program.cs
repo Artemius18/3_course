@@ -6,13 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 var prepareAnswer = (string method, string parmA, string parmB) 
-    => $"{method}-Http-KDA:ParmA={parmA ?? "Не задан"},ParmB={parmB ?? "Не задан"}";
+    => $"{method}-Http-PAF:ParmA={parmA ?? "Не задан"},ParmB={parmB ?? "Не задан"}";
 
-app.MapGet("{text}.kda", (string? ParmA, string? ParmB) => prepareAnswer("GET", ParmA, ParmB));
+app.MapGet("{text}.paf", (string? ParmA, string? ParmB) => prepareAnswer("GET", ParmA, ParmB));
 
-app.MapPost("{text}.kda", (string? ParmA, string? ParmB) => prepareAnswer("POST", ParmA, ParmB));
+app.MapPost("{text}.paf", (string? ParmA, string? ParmB) => prepareAnswer("POST", ParmA, ParmB));
 
-app.MapPut("{text}.kda", (string? ParmA, string? ParmB) => prepareAnswer("PUT", ParmA, ParmB));
+app.MapPut("{text}.paf", (string? ParmA, string? ParmB) => prepareAnswer("PUT", ParmA, ParmB));
 
 app.MapPost("Sum", (string? x, string? y) =>
 {
@@ -32,8 +32,8 @@ app.MapGet("Multiply", (context) =>
         <body>
             <script>
                 function send() {
-                    var x = 7;
-                    var y = 8;
+                    var x = 34;
+                    var y = 19;
                     var xhr = new XMLHttpRequest();
                     xhr.open('POST', `Multiply?x=${x}&y=${y}`, true);
                     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');

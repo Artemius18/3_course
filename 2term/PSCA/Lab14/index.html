@@ -4,8 +4,11 @@
 <head>
     <title>API Handler</title>
     <script>
-        function getAPI() {
-            fetch('/api/teachers')
+        let currentPage = 1;
+        const itemsPerPage = 10;
+
+        function getPulpits() {
+            fetch(`/api/pulpits?page=${currentPage}&limit=${itemsPerPage}`)
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
@@ -16,92 +19,25 @@
                 });
         }
 
-        function postAPI() {
-            const TEACHER = document.getElementById('postTEACHER').value;
-            const TEACHER_NAME = document.getElementById('postTEACHER_NAME').value;
-            const PULPIT = document.getElementById('postPULPIT').value;
-
-            const body = { TEACHER, TEACHER_NAME, PULPIT };
-
-            fetch('/api/teachers', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(body),
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    document.getElementById('result').textContent = JSON.stringify({ "DML": "INSERT", ...body, ...data }, null, 2)
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
+        function nextPage() {
+            currentPage++;
+            getPulpits();
         }
 
-        function putAPI() {
-            const TEACHER = document.getElementById('putTEACHER').value;
-            const TEACHER_NAME = document.getElementById('putTEACHER_NAME').value;
-            const PULPIT = document.getElementById('putPULPIT').value;
-
-            const body = { TEACHER, TEACHER_NAME, PULPIT };
-
-            fetch('/api/teachers', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(body),
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    document.getElementById('result').textContent = JSON.stringify({ "DML": "UPDATE", ...body, ...data }, null, 2);
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-        }
-
-        function deleteAPI() {
-            const id = document.getElementById('deleteID').value;
-
-            fetch(`/api/teachers/${id}`, {
-                method: 'DELETE',
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    document.getElementById('result').textContent = JSON.stringify({ "DML": "DELETE", ...{ "id": id }, ...data }, null, 2);
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                getPulpits();
+            }
         }
     </script>
 </head>
 
 <body>
-    <button onclick="getAPI()">GET</button>
+    <button onclick="getPulpits()">GET Pulpits</button>
+    <button onclick="prevPage()">Previous Page</button>
+    <button onclick="nextPage()">Next Page</button>
 
-    <h2>POST</h2>
-    <input id="postTEACHER" placeholder="TEACHER">
-    <input id="postTEACHER_NAME" placeholder="TEACHER_NAME">
-    <input id="postPULPIT" placeholder="PULPIT">
-    <button onclick="postAPI()">POST</button>
-
-    <h2>PUT</h2>
-    <input id="putTEACHER" placeholder="TEACHER">
-    <input id="putTEACHER_NAME" placeholder="TEACHER_NAME">
-    <input id="putPULPIT" placeholder="PULPIT">
-    <button onclick="putAPI()">PUT</button>
-
-    <h2>DELETE</h2>
-    <input id="deleteID" placeholder="ID">
-    <button onclick="deleteAPI()">DELETE</button>
-
-    <h2>Result:</h2>
     <pre id="result"></pre>
 </body>
 

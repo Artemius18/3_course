@@ -1,0 +1,22 @@
+<div class="col-md-8 offset-md-2" style="margin-top: 20px;">
+    <div style="height:450px; overflow-y: scroll; border: 1px solid black;">
+        {{#each contacts}}
+            <div class="card bg-light mb-3" data-key="{{id}}" style="margin: 20px;" onclick="window.location.href='/update/{{id}}'">
+                <div class="card-header">
+                    <h5>{{name}}</h5>
+                </div>
+                <div class="card-body">
+                    {{phone}}
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    <form style="margin-top:20px;" class="form">
+        <input type="input" style="margin-top:20px;" class="form-control" name="name" id="name" placeholder="Enter name">
+        <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter telephone">
+        <div style="display: flex; justify-content: center;">
+            <button style="width:20%; margin:1.5%" class="btn btn-primary" onclick="addContact()">Add</button>
+            {{{dismiss}}}
+        </div>
+    </form>
+</div>
