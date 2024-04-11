@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input id="x" type="number" placeholder="x">
+    <input id="y" type="number" placeholder="y">
+    <button onclick="sendRequest()">calculate</button>
+    <p id="result"></p>
+
+    <script>
+        function sendRequest() {
+            const x = document.getElementById('x').value;
+            const y = document.getElementById('y').value;
+
+            fetch('http://localhost:3000/calculate', {
+                method: 'POST',
+                headers: {
+                    'X-Value-x': x,
+                    'X-Value-y': y
+                }
+            })
+            .then(response => {
+                const z = response.headers.get('X-Value-z');
+                document.getElementById('result').innerText = 'result: ' + z;
+            });
+        }
+    </script>
+</body>
+</html>

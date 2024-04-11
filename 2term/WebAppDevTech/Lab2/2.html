@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input id="n" type="number" placeholder="N">
+    <button onclick="sendRequest()">generate</button>
+    <p id="result"></p>
+
+    <script>
+        function sendRequest() {
+            const n = document.getElementById('n').value;
+
+            fetch('http://localhost:3000/generate', {
+                method: 'POST',
+                headers: {
+                    'X-Rand-N': n
+                }
+            })
+            .then(response => response.json())
+            .then(numbers => {
+                document.getElementById('result').innerText = 'res: ' + numbers.join(', ');
+            });
+        }
+    </script>
+</body>
+</html>

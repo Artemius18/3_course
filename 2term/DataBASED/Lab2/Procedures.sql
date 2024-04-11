@@ -81,7 +81,7 @@ EXEC InsertIntoInstruments @InstrumentName = 'New Instrument', @CategoryID = 1, 
 
 EXEC UpdateInstruments @InstrumentID = 2, @InstrumentName = 'Updated Instrument', @CategoryID = 2, @ManufacturerID = 2, @Availability = 0, @Cost = 200.00;
 
-EXEC DeleteFromInstruments @InstrumentID = 2;
+EXEC DeleteFromInstruments @InstrumentID = 103;
 
 -------------------------------------------------------------TRIGGER---------------------------------------------------------------------
 CREATE TRIGGER InstrumentsInsertTrigger

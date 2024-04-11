@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input id="x" type="number" placeholder="x">
+    <input id="y" type="number" placeholder="y">
+    <button onclick="sendRequestA()">calculate</button>
+    <p id="resultA"></p>
+
+    <input id="n" type="number" placeholder="N">
+    <button onclick="sendRequestB()">generate</button>
+    <p id="resultB"></p>
+
+    <script>
+        function sendRequestA() {
+            const x = document.getElementById('x').value;
+            const y = document.getElementById('y').value;
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://localhost:3000/calculate', true); 
+            xhr.setRequestHeader('X-Value-x', x);
+            xhr.setRequestHeader('X-Value-y', y);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    const z = xhr.getResponseHeader('X-Value-z');
+                    document.getElementById('resultA').innerText = 'result: ' + z;
+                }
+            }
+            xhr.send();
+        }
+
+        function sendRequestB() {
+            const n = document.getElementById('n').value;
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://localhost:3000/generate', true); 
+            xhr.setRequestHeader('X-Rand-N', n);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    const numbers = JSON.parse(xhr.responseText);
+                    document.getElementById('resultB').innerText = 'res: ' + numbers.join(', ');
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</body>
+</html>
