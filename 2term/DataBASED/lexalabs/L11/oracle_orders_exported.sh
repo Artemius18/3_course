@@ -1,0 +1,1 @@
+sqlldr SYSADMIN/SYSADMIN_PASSWORD@//localhost:1521/BGSTORE CONTROL=oracle_orders_exported.ctl LOG=oracle_orders_exported.log

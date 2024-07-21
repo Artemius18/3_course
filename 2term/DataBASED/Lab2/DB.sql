@@ -24,15 +24,15 @@ CREATE TABLE Users (
     Balance DECIMAL(10, 2) NOT NULL CHECK (Balance >= 0)
 );
 
-CREATE TABLE Orders (
-    OrderID INT IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE Sold (
+    SoldID INT IDENTITY(1,1) PRIMARY KEY,
     UserID INT FOREIGN KEY REFERENCES Users(UserID) ON DELETE CASCADE,
     ReservationDate DATE NOT NULL
 );
 
-CREATE TABLE OrderItems (
-    OrderItemID INT IDENTITY(1,1) PRIMARY KEY,
-    OrderID INT FOREIGN KEY REFERENCES Orders(OrderID) ON DELETE CASCADE,
+CREATE TABLE SoldItems (
+    SoldItemID INT IDENTITY(1,1) PRIMARY KEY,
+    SoldID INT FOREIGN KEY REFERENCES Sold(SoldID) ON DELETE CASCADE,
     InstrumentID INT FOREIGN KEY REFERENCES Instruments(InstrumentID) ON DELETE CASCADE
 );
 
@@ -47,12 +47,13 @@ CREATE TABLE InstrumentsReview (
 
 -------------------------------------------------------------”ƒ¿À≈Õ»≈ “¿¡À»÷-------------------------------------------------------------------------------------------
     DROP TABLE InstrumentsReview;
-    DROP TABLE OrderItems;
-    DROP TABLE Orders;
+    DROP TABLE SoldItems;
+    DROP TABLE Sold;
     DROP TABLE Instruments;
     DROP TABLE Categories;
     DROP TABLE Manufacturers;
     DROP TABLE Users;
+
 
 -------------------------------------------------------------¬—“¿¬ ¿ ƒ¿ÕÕ€’-------------------------------------------------------------------------------------------
 ------------------------------------------------------Categories--------------------------------------------------
@@ -111,9 +112,11 @@ CREATE TABLE InstrumentsReview (
 
 
 ---------------------------------------------------------------Users---------------------------------------------------
-    INSERT INTO Users (UserName, Balance) VALUES ('John Doe', 1000.68);
-    INSERT INTO Users (UserName, Balance) VALUES ('Anna Bell', 1200.54);
-    
+    INSERT INTO Users (UserName, Balance) VALUES ('John Doe', 9999999.68);
+    INSERT INTO Users (UserName, Balance) VALUES ('Anna Bell', 9999999.54);
+    INSERT INTO Users (UserName, Balance) VALUES ('Adam Jake', 9999999.68);
+    INSERT INTO Users (UserName, Balance) VALUES ('Lelon Pier', 9999999.54); 
+    INSERT INTO Users (UserName, Balance) VALUES ('Cara Derric', 9999999.54);
     
     DELETE FROM Users
     SELECT * FROM Users
@@ -132,5 +135,9 @@ CREATE TABLE InstrumentsReview (
     SELECT *
     FROM Instruments i
     JOIN InstrumentsReview ir ON i.InstrumentID = ir.InstrumentID;
+
+	SELECT  *
+    FROM Sold o
+    JOIN SoldItems oi ON o.SoldId = oi.SoldId;
 
 

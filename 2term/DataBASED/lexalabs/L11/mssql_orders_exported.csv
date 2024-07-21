@@ -1,0 +1,4 @@
+id,account_id,order_date,order_status,order_comment,client_fullname,client_email,client_address,cost
+155,37,2022-01-01,shipped,Order comment,Ilepa Hifiqa,ilepa_hifiqa@gmail.com,23.681424616041035 Main Street, Jifub City,4084,38
+582,33,2022-01-02,returned,Order comment,Apexe Gebuxaq,apexe_gebuxaq@gmail.com,14.487078361052674 Main Street, Emekaw City,2591,90
+984,24,2022-01-02,returned,Order comment,Tim Anayofe,tim_anayofe@gmail.com,18.055928221400045 Main Street, Bazuhe City,4399,43

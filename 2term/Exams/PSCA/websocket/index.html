@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="bootstrap.css" rel="stylesheet">
+        <title>WebSocket</title>
+    </head>
+    <body>
+        <div>
+            <input type="button" value="Send Message" onclick="startWs()" class="btn btn-success"/>
+            <div id="messageBlock"/>
+        </div>
+        <script>
+            let mesBlock=document.getElementById("messageBlock")
+            const socket=new WebSocket('ws:localhost:5403/ws');
+            socket.onopen=()=>{
+                console.log('started ws');                  
+            }
+            socket.onmessage=(message)=>{
+                mesBlock.innerHTML+='<div>'+message.data+'</div>';
+            }
+            socket.onclose=e=>console.log('Socket closed');
+            socket.onerror=function(e){console.log(`ERROR: ${e.code}:${e.message}`)};
+            startWs=()=>{
+                socket.send('Hello');
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+﻿@page
+@model L4.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>UWSR</h1>
+<div>
+    <form id="toggle-user-role-form" method="post" asp-page-handler="ToggleUserRole" style="display: none;">
+        <button type="submit">Submit</button>
+    </form> 
+
+    @if (Utils.IsAdministrator(this.HttpContext))
+    {
+        <button type="button" class="btn btn-success mr-2" onclick="toggleCreateForm()">New link</button>
+
+        <div class="row" id="createLinkForm" style="display: none;">
+            <div class="col-md-4">
+                <form method="post" asp-page-handler="CreateLink" style="margin: 10px 0">
+                    <div asp-validation-sum style="margin: 5px 0" mary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="CreateLink.Url" class="control-label">Url</label>
+                        <input asp-for="CreateLink.Url" class="form-control" required />
+                        <span asp-validation-for="CreateLink.Url" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="margin: 5px 0">
+                        <label asp-for="CreateLink.Description" class="control-label">Tags</label>
+                        <input asp-for="CreateLink.Description" class="form-control" required />
+                        <span asp-validation-for="CreateLink.Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="margin: 10px 0">
+                        <input type="submit" value="Add new link" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+</div>
+<div>
+    <div id="filter-links-form" style="margin: 20px 0">
+        <form method="post" asp-page-handler="GetFilterLinks">
+            <input type="text" asp-for="LinksFindText" value="@Model.LinksFindText" placeholder="Tag, tag, tag..." />
+            <button type="submit" class="btn btn-primary">OK</button>
+        </form>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Url</th>
+            <th>Tags</th>
+            <th>Rating</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.FindLinks) 
+    {
+        <tr>
+            <td>
+                <a href="@item.Url">
+                @Html.DisplayFor(modelItem => item.Url)
+                </a>
+            </td>
+            <td>@Html.DisplayFor(modelItem => item.Description)</td>
+            <td>+@Html.DisplayFor(modelItem => item.Plus) | -@Html.DisplayFor(modelItem => item.Minus)</td>
+            <td>
+                <p><a asp-page="./Link" asp-route-id="@item.Id">More...</a></p>
+                @if (Utils.IsAdministrator(this.HttpContext))
+                {
+                    <div class="d-flex align-items-center">
+                        <form method="post" asp-page-handler="DeleteLink" style="margin: 5px;">
+                            <input type="hidden" name="linkId" value="@item.Id" />
+                            <input type="submit" value="Delete" class="btn btn-danger mr-2" />
+                        </form>
+                        <button type="button" class="btn btn-success mr-2" style="margin: 5px;" onclick="toggleEditForm('@item.Id')">Edit</button>
+                    </div>
+                    <div class="row" id="editForm_@item.Id" style="display: none;">
+                        <div class="col-md-4">
+                            <form method="post" asp-page-handler="EditLink" style="margin: 5px;">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" name="linkId" value="@item.Id" />
+                                <div class="form-group">
+                                    <label asp-for="EditLink.Url" class="control-label" style="margin: 5px 0 5px 0;">Url</label>
+                                    <input asp-for="EditLink.Url" class="form-control" required style="margin: 5px 0; width: 200px;" value="@item.Url" />
+                                    <span asp-validation-for="EditLink.Url" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="EditLink.Description" class="control-label" style="margin: 10px 0 5px 0;">Tags</label>
+                                    <input asp-for="EditLink.Description" class="form-control" required style="margin: 5px 0; width: 200px;" value="@item.Description" />
+                                    <span asp-validation-for="EditLink.Description" class="text-danger"></span>
+                                </div>
+                                <div class="form-group" style="margin: 10px 0 5px 0;">
+                                    <input type="submit" value="Save changes" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script>
+        document.addEventListener('keydown', function (event) {
+            if (event.altKey && event.keyCode == 82) {
+                document.getElementById('toggle-user-role-form').submit();
+            }
+        });
+        function toggleCreateForm() {
+            var form = document.getElementById('createLinkForm');
+            if (form.style.display === 'none') {
+                form.style.display = 'block';
+            } else {
+                form.style.display = 'none';
+            }
+        }
+        function toggleEditForm(linkId) {
+            var editForm = document.getElementById('editForm_' + linkId);
+            if (editForm.style.display === 'none') {
+                editForm.style.display = 'block';
+            } else {
+                editForm.style.display = 'none';
+            }
+        }
+    </script>
+}

@@ -8,7 +8,7 @@ data = []
 for i in range(100):
     instrument = {
         "InstrumentName": fake.name() + ' ' + fake.word(),
-        "CategoryID": random.randint(1, 5),
+        "CategoryID": random.randint(1, 7),
         "ManufacturerID": random.randint(1, 29),
         "Availability": random.choice([True, False]),
         "Price": round(random.uniform(100, 10000), 2)

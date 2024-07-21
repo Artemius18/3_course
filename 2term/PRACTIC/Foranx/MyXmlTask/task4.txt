@@ -1,0 +1,47 @@
+Сервис должен работать на порту 5443. Разварачивается в Jboss 7.1 и выше.
+Все поля обязятельны для заполнения, при отсуствии поля или пустом значении в нем в ответ возвращать ошибку с именем поля.
+Дополнительная проверка для тэге paramKey = clientid , в тэге paramValue значение должно содержат только цифры и иметь длину 8 символов
+
+запрос
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+<soapenv:Body><ns1:GetInformationArguments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:GetInformationArguments">
+	<password>password</password>
+	<username>username</username>
+	<parameters>
+		<paramKey>clientid</paramKey>
+		<paramValue>95647891</paramValue>
+	</parameters>
+	<parameters>
+		<paramKey>getInfoType</paramKey>
+		<paramValue>CHK_PERFORM_TRN</paramValue>
+	</parameters>
+	<serviceId>1</serviceId>
+	</ns1:GetInformationArguments>
+</soapenv:Body>
+</soapenv:Envelope>
+
+Ответ в случае ошибки в зависимости от ошибки изменяется тэг faultstring:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Body>
+  <soapenv:Fault>
+   <faultcode >1</faultcode>
+   <faultstring>is empty</faultstring>
+   <detail>
+    <string>serviceId is empty</string>
+   </detail>
+  </soapenv:Fault>
+ </soapenv:Body>
+
+
+Ответ без ошибки:
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <soapenv:Body>
+ <m:GetResponse>
+    <m:MSG>OK</m:MSG>
+ </m:GetResponse>
+ </soapenv:Body>
+ 
+ 

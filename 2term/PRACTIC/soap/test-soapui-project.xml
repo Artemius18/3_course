@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="fc26a575-009f-4486-94c3-dae97d7c8c65" activeEnvironment="Default" name="client" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="fcd82126-0dc9-4a00-803b-2bfdaf5d414a" wsaVersion="NONE" name="GetClientServiceServiceSoapBinding" type="wsdl" bindingName="{http://service.getclient.com/}GetClientServiceServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:5443/server-1.0-SNAPSHOT/GetClientService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:5443/server-1.0-SNAPSHOT/GetClientService?wsdl"><con:part><con:url>http://localhost:5443/server-1.0-SNAPSHOT/GetClientService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="GetClientServiceService" targetNamespace="http://service.getclient.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.getclient.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://service.getclient.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetClientIdentificator" nillable="true" type="xs:anyType"/>
+      <xs:element name="GetClientIdentificatorResponse" type="tns:GetClientIdentificatorResponse"/>
+      <xs:element name="GetClientResponse" type="tns:getClientResponse"/>
+      <xs:complexType name="GetClientIdentificator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GetClientId" type="tns:getClientRequest"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getClientRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="clientid" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetClientIdentificatorResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getClientResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getClientResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="clientid" type="xs:string"/>
+          <xs:element minOccurs="0" name="username" type="xs:string"/>
+          <xs:element minOccurs="0" name="serviceid" type="xs:string"/>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+          <xs:element minOccurs="0" name="MSG" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetClientIdentificatorResponse">
+    <wsdl:part element="tns:GetClientIdentificatorResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetClientIdentificator">
+    <wsdl:part element="tns:GetClientIdentificator" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="GetClientService">
+    <wsdl:operation name="GetClientIdentificator">
+      <wsdl:input message="tns:GetClientIdentificator" name="GetClientIdentificator"></wsdl:input>
+      <wsdl:output message="tns:GetClientIdentificatorResponse" name="GetClientIdentificatorResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetClientServiceServiceSoapBinding" type="tns:GetClientService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetClientIdentificator">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetClientIdentificator">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetClientIdentificatorResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetClientServiceService">
+    <wsdl:port binding="tns:GetClientServiceServiceSoapBinding" name="GetClientServicePort">
+      <soap:address location="http://localhost:5443/server-1.0-SNAPSHOT/GetClientService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:5443/server-1.0-SNAPSHOT/GetClientService</con:endpoint></con:endpoints><con:operation id="94b7d282-ccc5-43b2-9389-b73694edfb33" isOneWay="false" action="" name="GetClientIdentificator" bindingOperationName="GetClientIdentificator" type="Request-Response" outputName="GetClientIdentificatorResponse" inputName="GetClientIdentificator" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="583c07e7-2c4a-474f-a8f5-fadd8d305795" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5443/server-1.0-SNAPSHOT/GetClientService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.getclient.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:GetClientIdentificator>
+         <GetClientId>
+             <clientid>66666666</clientid>
+         </GetClientId>
+      </ser:GetClientIdentificator>
+   </soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.getclient.com/GetClientService/GetClientIdentificator"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

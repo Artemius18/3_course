@@ -1,0 +1,34 @@
+GET http://localhost:5183/MResearch/M01/1
+###
+GET http://localhost:5183/MResearch/M01/
+###
+GET http://localhost:5183/MResearch
+###
+GET http://localhost:5183/
+###
+GET http://localhost:5183/V2/MResearch/M01
+###
+GET http://localhost:5183/V3/MResearch/string/M01
+###
+### M02
+###
+GET http://localhost:5183/V2
+###
+GET http://localhost:5183/V2/MResearch
+###
+GET http://localhost:5183/V2/MResearch/M02
+###
+GET http://localhost:5183/MResearch/M02/
+###
+GET http://localhost:5183/V3/MResearch/string/M02
+###
+### M03
+###
+GET http://localhost:5183/V3
+###
+GET http://localhost:5183/V3/MResearch/str
+###
+GET http://localhost:5183/V3/MResearch/string/M02
+###
+GET http://localhost:5183/xd/z/z/z/z/z/z/z/
+###

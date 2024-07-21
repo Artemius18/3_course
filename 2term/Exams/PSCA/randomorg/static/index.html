@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="bootstrap.css" rel="stylesheet">
+        <title>Guess The Number</title>
+    </head>
+    <body>
+        <h1>I guessed the number. Try It!</h1>
+        <input type="number" id="numb" class="form-control" placeholder="Try to guess the number">
+        <input type="click" class="btn btn-danger" value="Send" onclick="sendNumber()"/>
+        <div id="result">
+        <script>
+            sendNumber=()=>{
+                console.log('Number:'+document.getElementById('numb').value);
+                fetch('/',{
+                    method: 'POST',
+                    headers:{
+                        'Content-Type':'text/plain'
+                    },
+                    body: document.getElementById('numb').value
+                }).then(resp=>resp.text()).then(text=>{
+                    document.getElementById('result').innerText=text;
+                })
+            }
+        </script>
+    </body>
+</html>

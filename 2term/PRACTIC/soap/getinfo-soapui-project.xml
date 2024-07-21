@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="424c6940-f1f9-47c9-ac69-6f2c836ac6cb" activeEnvironment="Default" name="getinfo" resourceRoot="" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f1a75720-3d02-42f7-941c-20dbb216861a" wsaVersion="NONE" name="ValidateInformationServiceSoapBinding" type="wsdl" bindingName="{http://service.getinfo.com/}ValidateInformationServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:5443/server-1.0-SNAPSHOT/ValidateInformation?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:5443/server-1.0-SNAPSHOT/ValidateInformation?wsdl"><con:part><con:url>http://localhost:5443/server-1.0-SNAPSHOT/ValidateInformation?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ValidateInformationService" targetNamespace="http://service.getinfo.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.getinfo.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://service.getinfo.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetInformation" type="tns:GetInformation"/>
+      <xs:element name="GetInformationArguments" type="tns:getInformationArguments"/>
+      <xs:element name="GetInformationResponse" type="tns:GetInformationResponse"/>
+      <xs:element name="GetResponse" type="tns:getResponse"/>
+      <xs:complexType name="GetInformation">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GetInformationArguments" type="tns:getInformationArguments"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getInformationArguments">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="parameters" type="tns:parameters"/>
+          <xs:element minOccurs="0" name="password" type="xs:string"/>
+          <xs:element minOccurs="0" name="serviceId" type="xs:string"/>
+          <xs:element minOccurs="0" name="username" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="parameters">
+        <xs:sequence>
+          <xs:element name="paramKey" type="xs:string"/>
+          <xs:element name="paramValue" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="GetInformationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MSG" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetInformationResponse">
+    <wsdl:part element="tns:GetInformationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="GetInformation">
+    <wsdl:part element="tns:GetInformation" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ValidateInformation">
+    <wsdl:operation name="GetInformation">
+      <wsdl:input message="tns:GetInformation" name="GetInformation"></wsdl:input>
+      <wsdl:output message="tns:GetInformationResponse" name="GetInformationResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ValidateInformationServiceSoapBinding" type="tns:ValidateInformation">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetInformation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="GetInformation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="GetInformationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ValidateInformationService">
+    <wsdl:port binding="tns:ValidateInformationServiceSoapBinding" name="ValidateInformationPort">
+      <soap:address location="http://localhost:5443/server-1.0-SNAPSHOT/ValidateInformation"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:5443/server-1.0-SNAPSHOT/ValidateInformation</con:endpoint></con:endpoints><con:operation id="287d1f59-5c7e-4eaa-8814-f8384a3887a2" isOneWay="false" action="" name="GetInformation" bindingOperationName="GetInformation" type="Request-Response" outputName="GetInformationResponse" inputName="GetInformation" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="45b66bcd-7b15-4504-8618-9f54310f2560" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:5443/server-1.0-SNAPSHOT/ValidateInformation</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.getinfo.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:GetInformation>\r        
+         <GetInformationArguments>
+            <username>Artyom</username>       \r     
+            <password>qwerty</password>
+            <parameters>\r
+               <paramKey>clientid</paramKey>\r
+               <paramValue>11111111</paramValue>\r
+            </parameters>\r       
+             <parameters>
+               <paramKey>paramKey2</paramKey>
+               <paramValue>paramValue2</paramValue>
+            </parameters>
+            <serviceId>8</serviceId>
+         </GetInformationArguments>\r
+      </ser:GetInformation>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.getinfo.com/ValidateInformation/GetInformation"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

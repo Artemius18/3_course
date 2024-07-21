@@ -1,0 +1,46 @@
+TEMENOS. 
+TRANSACT. -продукт, то, с чем мы работаем; по сути, это APP, который разворачивается на JBOSS DEPLOYMENT -> L(EVEL)1 - incapsulated (то, что для нас скрыто)
+CUSTOMER		|
+ACCOUNT			|
+AA (LOANS & DEPOSITS)	|
+PAYMENT			|
+
+
+
+L2? -> UPDATES -> TEMENOS DESY 
+
+
+FORANX - TEMENOS PARTNER
+LOCAL.APPLS -> JBOSS DEPLOYMENT -> L(EVEL)3 (LOCAL CODE)
+
+1) работа с EB.TABLE.DEFINITON -> заполнили поля -> создали свою таблицу (ПРИЛОЖУХА ДЛЯ СОЗДАНИЯ СВОИХ КАСТОМНЫХ ПРИЛОЖЕНИЙ)
+отличие TEXT И ALPHANUMERIC
+
+PGM.FILE TYPE
+History (default) на примере AC.TEST.RAKETSKI1:
+		  - AC.TEST.RAKETSKI1$NAU - неавторизованная
+		  - AC.TEST.RAKETSKI1 - live (текущая запись для работы)
+		  - AC.TEST.RAKETSKI1$HIS
+
+Unauth file - AC.TEST.RAKETSKI1
+	    - AC.TEST.RAKETSKI1$NAU - неавторизованная
+
+
+Live - AC.TEST.RAKETSKI1 
+
+
+EB.CONTRACT.BALANCES - live file с историей операций аккаунта за день (а-ля "выписка с карточки")
+EB.TABLES.PROCEDURES - прикрепление бизнес-логики, когда создали кастомную приложуху в EB.TABLE.DEFINITON
+
+
+2) работа с EB.TABLES.PROCEDURES
+
+жизненные стадии записи (life, auth, unauth), и на этапе когда запись unauth-live есть подэтапы:
+1) инициализация (когда только создали)
+2) check id (кастомная проверка идентификатора (не только по range, например, но какое-то свое специфическое поведение нашего идентификатора)
+3) check rec (работает всегда перед тем, как отрываем запись на просмотр/редактирование на экран)
+- перед тем, как запись помещается в unauth, отработает типа "триггер" beforeunau
+- то же самое, когда берем запись из unauth, отработает after unauth
+4) финальный этап - авторизация записи
+- before auth: выполнение доп. проверок и валидаций перед тем, как запись будет авторизована
+- after auth: обновление других таблиц, запись логов, уведомление других систем и тд

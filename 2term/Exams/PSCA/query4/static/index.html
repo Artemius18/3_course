@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Task</title>
+        <link href="bootstrap.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="form-group">
+            <button class="btn btn-success" onclick="get()">GET</button>
+            <button class="btn btn-primary" onclick="post()">POST</button>
+            <button class="btn btn-warning" onclick="put()">PUT</button>
+            <button class="btn btn-danger" onclick="delet()">DELETE</button>
+        </div>
+        <div id="result"></div>
+        <script>
+            get=()=>{
+                fetch('/resource',{
+                    method:'GET'
+                }).then(resp=>resp.text()).then(text=>{
+                    document.getElementById("result").innerText=text;
+                })
+            }
+            post=()=>{
+                fetch('/resource',{
+                    method:'POST'
+                }).then(resp=>resp.text()).then(text=>{
+                    document.getElementById("result").innerText=text;
+                })
+            }
+            put=()=>{
+                fetch('/resource',{
+                    method:'PUT'
+                }).then(resp=>resp.text()).then(text=>{
+                    document.getElementById("result").innerText=text;
+                })
+            }
+            delet=()=>{
+                fetch('/resource',{
+                    method:'DELETE'
+                }).then(resp=>resp.text()).then(text=>{
+                    document.getElementById("result").innerText=text;
+                })
+            }
+        </script>
+    </body>
+</html>

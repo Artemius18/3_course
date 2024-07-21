@@ -24,6 +24,6 @@ BEGIN
 
   PRINT 'Import completed successfully.';
 END;
-
 EXEC ImportInstrumentsFromJSON;
+
 SELECT * FROM Instruments;

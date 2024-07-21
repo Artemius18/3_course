@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<h1>Admin/RemoveRole</h1>
+<form method="post" action="/Admin/RemoveRole">
+    <div>
+        <label for="f-user">User</label>
+        <input autocomplete="off" name="name" id="f-user" placeholder="User name">
+    </div>
+    <div>
+        <label for="f-role">Roles</label>
+        <input autocomplete="off" name="roleName" id="f-role" placeholder="Role name">
+    </div>
+    <button type="submit">RemoveRole</button>
+</form>

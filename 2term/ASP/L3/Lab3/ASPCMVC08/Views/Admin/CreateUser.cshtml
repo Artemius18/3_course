@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<h1>Admin/CreateUser</h1>
+<form method="post" action="/Admin/CreateUser">
+    <div>
+        <label for="f-user-name">Name:</label>
+        <input name="name" id="f-user-name" type="text" placeholder="User name" />
+    </div>
+    <div>
+        <label for="f-user-password">Password:</label>
+        <input name="password" id="f-user-password" type="password" placeholder="Password"/>
+    </div>
+    <button type="submit">Create user</button>
+</form>

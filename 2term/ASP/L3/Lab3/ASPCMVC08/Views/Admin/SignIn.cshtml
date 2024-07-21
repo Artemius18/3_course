@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<h1>Admin/SignIn</h1>
+<form method="post" action="/Admin/SignIn">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="User name">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="Password">
+    </div>
+   @*  <div>
+        <label for="rememberMe">Remember Me:</label>
+        <input type="checkbox" id="rememberMe" name="rememberMe">
+    </div> *@
+    <button type="submit">Sign in</button>
+</form>

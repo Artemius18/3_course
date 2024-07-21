@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="bootstrap.css" rel="stylesheet">
+        <title>Query2</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="form-group">
+            <label>
+                Name
+                <input type="text" class="form-control" id="name"/>
+            </label>
+            <label>
+                Age
+                <input type="number" class="form-control" id="age"/>
+            </label>
+            <input type="button" class="form-control btn btn-primary" value="Write to JSON" onclick="submit()"/>
+        </div>
+        <div id="result"></div>
+        <script>
+            submit=()=>{
+                var body={
+                    name: document.getElementById('name').value,
+                    age: document.getElementById('age').value
+                }
+                var formBody=[];
+                for (var property in body) {
+                    var encodedKey = encodeURIComponent(property);
+                    var encodedValue = encodeURIComponent(body[property]);
+                    formBody.push(encodedKey + "=" + encodedValue);
+                }
+                formBody = formBody.join("&");
+                fetch('/human',{
+                    method:'POST',
+                    headers:{
+                        'content-type':'application/x-www-form-urlencoded'
+                    },
+                    body:formBody
+                }).then(resp=>resp.text()).then(text=>{
+                    document.getElementById("result").innerText=text;
+                })
+            }
+        </script>
+    </body>
+</html>

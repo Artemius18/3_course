@@ -1,0 +1,2 @@
+"{\"WFLYCTL0080: Failed services\" => {\"jboss.deployment.unit.\\\"server-1.0-SNAPSHOT.war\\\".undertow-deployment.UndertowDeploymentInfoService\" => \"Failed to start service
+    Caused by: java.lang.NoClassDefFoundError: Failed to link com/sun/xml/ws/transport/http/servlet/WSServlet (Module \\\"deployment.server-1.0-SNAPSHOT.war\\\" from Service Module Loader): javax/servlet/http/HttpServlet\"}}"

@@ -1,0 +1,32 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+
+
+GET http://localhost:5183/MResearch/M02/1 
+
+GET http://localhost:5183/MResearch/M01/2
+
+GET http://localhost:5183/V3/MResearch
+
+# M01
+GET http://localhost:5183/MResearch/M01/1
+GET http://localhost:5183/MResearch/M01
+GET http://localhost:5183/MResearch
+GET http://localhost:5183/
+GET http://localhost:5183/V2/MResearch/M01
+GET http://localhost:5183/V3/MResearch/string/M01
+
+
+# M02
+GET http://localhost:5183/V2
+GET http://localhost:5183/V2/MResearch
+GET http://localhost:5183/V2/MResearch/M02
+GET http://localhost:5183/MResearch/M02
+GET http://localhost:5183/V3/MResearch/string/M02
+
+
+# M03
+GET http://localhost:5183/V3
+GET http://localhost:5183/V3/MResearch/string/
+GET http://localhost:5183/V3/MResearch/string/M03
+

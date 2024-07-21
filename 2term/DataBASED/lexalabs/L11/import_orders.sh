@@ -1,0 +1,1 @@
+sqlldr SYSADMIN/SYSADMIN_PASSWORD@//localhost:1521/BGSTORE CONTROL=import.ctl LOG=import.log

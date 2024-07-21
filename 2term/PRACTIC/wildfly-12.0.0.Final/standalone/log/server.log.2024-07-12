@@ -1,0 +1,223 @@
+2024-07-12 08:21:38,960 INFO  [org.jboss.modules] (main) JBoss Modules version 1.7.0.Final
+2024-07-12 08:21:40,835 INFO  [org.jboss.msc] (main) JBoss MSC version 1.3.2.Final
+2024-07-12 08:21:40,844 INFO  [org.jboss.threads] (main) JBoss Threads version 2.3.1.Final
+2024-07-12 08:21:40,947 INFO  [org.jboss.as] (MSC service thread 1-2) WFLYSRV0049: WildFly Full 12.0.0.Final (WildFly Core 4.0.0.Final) starting
+2024-07-12 08:21:40,947 DEBUG [org.jboss.as.config] (MSC service thread 1-2) Configured system properties:
+	awt.toolkit = sun.awt.windows.WToolkit
+	file.encoding = Cp1251
+	file.encoding.pkg = sun.io
+	file.separator = \
+	java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+	java.awt.printerjob = sun.awt.windows.WPrinterJob
+	java.class.path = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\jboss-modules.jar
+	java.class.version = 52.0
+	java.endorsed.dirs = C:\Program Files\Java\jdk-1.8\jre\lib\endorsed
+	java.ext.dirs = C:\Program Files\Java\jdk-1.8\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+	java.home = C:\Program Files\Java\jdk-1.8\jre
+	java.io.tmpdir = C:\Users\artem\AppData\Local\Temp\
+	java.library.path = C:\Program Files\Java\jdk-1.8\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jdk-1.8\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Python312\Scripts;C:\Program Files\apache-maven-3.9.8\bin;C:\Program Files\Git\cmd;;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Users\artem\AppData\Local\Microsoft\WindowsApps;D:\Apps\Microsoft VS Code\bin;C:\Users\artem\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA 2022.1.2\bin;;.
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.8.0_401-b10
+	java.specification.maintenance.version = 5
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.8
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.8.0_401
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.8
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 25.401-b10
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final
+	jboss.host.name = desktop-72uc2mt
+	jboss.modules.dir = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = desktop-72uc2mt
+	jboss.qualified.host.name = desktop-72uc2mt
+	jboss.server.base.dir = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone
+	jboss.server.config.dir = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\configuration
+	jboss.server.data.dir = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\data
+	jboss.server.deploy.dir = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\data\content
+	jboss.server.log.dir = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\log
+	jboss.server.name = desktop-72uc2mt
+	jboss.server.persist.config = true
+	jboss.server.temp.dir = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\tmp
+	line.separator = 
+
+	logging.configuration = file:E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\configuration/logging.properties
+	module.path = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\modules
+	org.jboss.boot.log.file = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\log\server.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Windows 10
+	os.version = 10.0
+	path.separator = ;
+	program.name = standalone.bat
+	sun.arch.data.model = 64
+	sun.boot.class.path = C:\Program Files\Java\jdk-1.8\jre\lib\resources.jar;C:\Program Files\Java\jdk-1.8\jre\lib\rt.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jsse.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jce.jar;C:\Program Files\Java\jdk-1.8\jre\lib\charsets.jar;C:\Program Files\Java\jdk-1.8\jre\lib\jfr.jar;C:\Program Files\Java\jdk-1.8\jre\classes
+	sun.boot.library.path = C:\Program Files\Java\jdk-1.8\jre\bin
+	sun.cpu.endian = little
+	sun.cpu.isalist = amd64
+	sun.desktop = windows
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\jboss-modules.jar -mp E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\modules org.jboss.as.standalone -Djboss.home.dir=E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = Cp1251
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = 
+	user.country = RU
+	user.dir = E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\bin
+	user.home = C:\Users\artem
+	user.language = ru
+	user.name = artem
+	user.script = 
+	user.timezone = Europe/Moscow
+	user.variant = 
+2024-07-12 08:21:40,947 DEBUG [org.jboss.as.config] (MSC service thread 1-2) VM Arguments: -Dprogram.name=standalone.bat -Xms64M -Xmx512M -XX:MetaspaceSize=96M -XX:MaxMetaspaceSize=256m -Djava.net.preferIPv4Stack=true -Djboss.modules.system.pkgs=org.jboss.byteman -Dorg.jboss.boot.log.file=E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\log\server.log -Dlogging.configuration=file:E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\configuration/logging.properties 
+2024-07-12 08:21:44,798 INFO  [org.jboss.as.controller.management-deprecated] (Controller Boot Thread) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/core-service=management/management-interface=http-interface' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2024-07-12 08:21:44,817 INFO  [org.wildfly.security] (ServerService Thread Pool -- 20) ELY00001: WildFly Elytron version 1.2.2.Final
+2024-07-12 08:21:44,817 INFO  [org.jboss.as.controller.management-deprecated] (ServerService Thread Pool -- 27) WFLYCTL0028: Attribute 'security-realm' in the resource at address '/subsystem=undertow/server=default-server/https-listener=https' is deprecated, and may be removed in a future version. See the attribute description in the output of the read-resource-description operation to learn more about the deprecation.
+2024-07-12 08:21:44,882 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0039: Creating http management service using socket-binding (management-http)
+2024-07-12 08:21:44,898 INFO  [org.xnio] (MSC service thread 1-1) XNIO version 3.6.2.Final
+2024-07-12 08:21:44,898 INFO  [org.xnio.nio] (MSC service thread 1-1) XNIO NIO Implementation Version 3.6.2.Final
+2024-07-12 08:21:44,939 WARN  [org.jboss.as.txn] (ServerService Thread Pool -- 58) WFLYTX0013: The node-identifier attribute on the /subsystem=transactions is set to the default value. This is a danger for environments running multiple servers. Please make sure the attribute value is unique.
+2024-07-12 08:21:44,939 INFO  [org.jboss.as.jaxrs] (ServerService Thread Pool -- 43) WFLYRS0016: RESTEasy version 3.5.0.Final
+2024-07-12 08:21:44,939 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 42) WFLYCLINF0001: Activating Infinispan subsystem.
+2024-07-12 08:21:44,948 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 50) WFLYNAM0001: Activating Naming Subsystem
+2024-07-12 08:21:44,956 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 57) WFLYSEC0002: Activating Security Subsystem
+2024-07-12 08:21:44,956 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 60) WFLYWS0002: Activating WebServices Extension
+2024-07-12 08:21:44,965 INFO  [org.jboss.as.jsf] (ServerService Thread Pool -- 48) WFLYJSF0007: Activated the following JSF Implementations: [main]
+2024-07-12 08:21:44,965 INFO  [org.jboss.as.security] (MSC service thread 1-7) WFLYSEC0001: Current PicketBox version=5.0.2.Final
+2024-07-12 08:21:45,031 INFO  [org.jboss.as.connector] (MSC service thread 1-4) WFLYJCA0009: Starting JCA Subsystem (WildFly/IronJacamar 1.4.7.Final)
+2024-07-12 08:21:45,047 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 36) WFLYJCA0004: Deploying JDBC-compliant driver class org.h2.Driver (version 1.4)
+2024-07-12 08:21:45,064 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-4) WFLYJCA0018: Started Driver service with driver-name = h2
+2024-07-12 08:21:45,073 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0003: Undertow 2.0.0.Final starting
+2024-07-12 08:21:45,073 INFO  [org.jboss.as.naming] (MSC service thread 1-7) WFLYNAM0003: Starting Naming Service
+2024-07-12 08:21:45,081 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-4) WFLYMAIL0001: Bound mail session [java:jboss/mail/Default]
+2024-07-12 08:21:45,372 INFO  [org.wildfly.extension.io] (ServerService Thread Pool -- 41) WFLYIO001: Worker 'default' has auto-configured to 32 core threads with 256 task threads based on your 16 available processors
+2024-07-12 08:21:45,382 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0481: Strict pool slsb-strict-max-pool is using a max instance size of 256 (per class), which is derived from thread worker pool sizing.
+2024-07-12 08:21:45,382 INFO  [org.jboss.as.ejb3] (MSC service thread 1-3) WFLYEJB0482: Strict pool mdb-strict-max-pool is using a max instance size of 64 (per class), which is derived from the number of CPUs on this host.
+2024-07-12 08:21:45,431 INFO  [org.jboss.remoting] (MSC service thread 1-3) JBoss Remoting version 5.0.5.Final
+2024-07-12 08:21:45,556 INFO  [org.jboss.as.ejb3] (MSC service thread 1-7) WFLYEJB0493: EJB subsystem suspension complete
+2024-07-12 08:21:45,629 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 59) WFLYUT0014: Creating file handler for path 'E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final/welcome-content' with options [directory-listing: 'false', follow-symlink: 'false', case-sensitive: 'true', safe-symlink-paths: '[]']
+2024-07-12 08:21:45,639 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0012: Started server default-server.
+2024-07-12 08:21:45,647 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-3) WFLYUT0018: Host default-host starting
+2024-07-12 08:21:45,659 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-5) WFLYJCA0001: Bound data source [java:jboss/datasources/ExampleDS]
+2024-07-12 08:21:45,688 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0006: Undertow HTTP listener default listening on 127.0.0.1:5443
+2024-07-12 08:21:48,813 INFO  [org.jboss.as.patching] (MSC service thread 1-5) WFLYPAT0050: WildFly Full cumulative patch ID is: base, one-off patches include: none
+2024-07-12 08:21:48,825 WARN  [org.jboss.as.domain.management.security] (MSC service thread 1-1) WFLYDM0111: Keystore E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\configuration\application.keystore not found, it will be auto generated on first use with a self signed certificate for host localhost
+2024-07-12 08:21:48,828 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-1) WFLYDS0013: Started FileSystemDeploymentService for directory E:\BSTU\3_course\2term\PRACTIC\wildfly-12.0.0.Final\standalone\deployments
+2024-07-12 08:21:49,039 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-6) WFLYUT0006: Undertow HTTPS listener https listening on 127.0.0.1:8443
+2024-07-12 08:21:49,814 INFO  [org.jboss.ws.common.management] (MSC service thread 1-2) JBWS022052: Starting JBossWS 5.2.0.Final (Apache CXF 3.2.2) 
+2024-07-12 08:21:49,872 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+2024-07-12 08:21:49,872 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+2024-07-12 08:21:49,874 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+2024-07-12 08:21:49,874 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly Full 12.0.0.Final (WildFly Core 4.0.0.Final) started in 11566ms - Started 292 of 513 services (308 services are lazy, passive or on-demand)
+2024-07-12 08:21:50,108 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) WFLYSRV0027: Starting deployment of "server-1.0-SNAPSHOT.war" (runtime-name: "server-1.0-SNAPSHOT.war")
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry hk2.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry hk2-core.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry class-model.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry config.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry tiger-types.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry bean-validator.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry jtype.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry auto-depends.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry javax.inject.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry asm-all-repackaged.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry hk2-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry osgi-resource-locator.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry javax.inject.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/ha-api-3.1.12.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry jakarta.annotation-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry jakarta.activation-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry jakarta.jws-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,962 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry jakarta.xml.bind-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,970 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry jakarta.xml.ws-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,971 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry jakarta.xml.soap-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,971 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry FastInfoset.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,971 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry gmbal.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,971 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry ha-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry istack-commons-runtime.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry jaxb-runtime.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry management-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry mimepull.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry pfl-asm.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry pfl-basic-tools.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry pfl-basic.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry pfl-dynamic.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry pfl-tf-tools.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry pfl-tf.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry policy.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry saaj-impl.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry stax-ex.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry stax2-api.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry streambuffer.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry txw2.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:54,972 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-4) WFLYSRV0059: Class Path entry woodstox-core.jar in /E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/bin/content/server-1.0-SNAPSHOT.war/WEB-INF/lib/jaxws-rt-2.3.2.jar  does not point to a valid jar for a Class-Path reference.
+2024-07-12 08:21:56,390 WARN  [org.jboss.as.ee] (MSC service thread 1-5) WFLYEE0007: Not installing optional component com.sun.xml.ws.transport.http.servlet.WSAsyncListener$1 due to an exception (enable DEBUG log level to see the cause)
+2024-07-12 08:21:56,602 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-5) WFLYJCA0005: Deploying non-JDBC-compliant driver class org.sqlite.JDBC (version 3.36)
+2024-07-12 08:21:56,618 INFO  [org.infinispan.factories.GlobalComponentRegistry] (MSC service thread 1-2) ISPN000128: Infinispan version: Infinispan 'Bastille' 9.1.6.Final
+2024-07-12 08:21:56,662 INFO  [org.jboss.ws.cxf.metadata] (MSC service thread 1-5) JBWS024061: Adding service endpoint metadata: id=com.getinfo.service.ValidateInformation
+ address=http://localhost:5443/server-1.0-SNAPSHOT/ValidateInformation
+ implementor=com.getinfo.service.ValidateInformation
+ serviceName={http://service.getinfo.com/}ValidateInformationService
+ portName={http://service.getinfo.com/}ValidateInformationPort
+ annotationWsdlLocation=null
+ wsdlLocationOverride=null
+ mtomEnabled=false
+2024-07-12 08:21:56,662 INFO  [org.jboss.ws.cxf.metadata] (MSC service thread 1-5) JBWS024061: Adding service endpoint metadata: id=com.getclient.service.GetClientService
+ address=http://localhost:5443/server-1.0-SNAPSHOT/GetClientService
+ implementor=com.getclient.service.GetClientService
+ serviceName={http://service.getclient.com/}GetClientServiceService
+ portName={http://service.getclient.com/}GetClientServicePort
+ annotationWsdlLocation=null
+ wsdlLocationOverride=null
+ mtomEnabled=false
+2024-07-12 08:21:56,771 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 14) WFLYCLINF0002: Started client-mappings cache from ejb container
+2024-07-12 08:21:57,100 INFO  [org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean] (MSC service thread 1-5) Creating Service {http://service.getinfo.com/}ValidateInformationService from class com.getinfo.service.ValidateInformation
+2024-07-12 08:21:57,357 INFO  [org.apache.cxf.endpoint.ServerImpl] (MSC service thread 1-5) Setting the server's publish address to be http://localhost:5443/server-1.0-SNAPSHOT/ValidateInformation
+2024-07-12 08:21:57,414 INFO  [org.jboss.ws.cxf.deployment] (MSC service thread 1-5) JBWS024074: WSDL published to: file:/E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/standalone/data/wsdl/server-1.0-SNAPSHOT.war/ValidateInformationService.wsdl
+2024-07-12 08:21:57,414 INFO  [org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean] (MSC service thread 1-5) Creating Service {http://service.getclient.com/}GetClientServiceService from class com.getclient.service.GetClientService
+2024-07-12 08:21:57,422 INFO  [org.apache.cxf.endpoint.ServerImpl] (MSC service thread 1-5) Setting the server's publish address to be http://localhost:5443/server-1.0-SNAPSHOT/GetClientService
+2024-07-12 08:21:57,430 INFO  [org.jboss.ws.cxf.deployment] (MSC service thread 1-5) JBWS024074: WSDL published to: file:/E:/BSTU/3_course/2term/PRACTIC/wildfly-12.0.0.Final/standalone/data/wsdl/server-1.0-SNAPSHOT.war/GetClientServiceService.wsdl
+2024-07-12 08:21:57,455 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0018: Started Driver service with driver-name = server-1.0-SNAPSHOT.war_org.sqlite.JDBC_3_36
+2024-07-12 08:21:57,455 INFO  [org.jboss.as.webservices] (MSC service thread 1-6) WFLYWS0003: Starting service jboss.ws.endpoint."server-1.0-SNAPSHOT.war"."com.getclient.service.GetClientService"
+2024-07-12 08:21:57,455 INFO  [org.jboss.as.webservices] (MSC service thread 1-8) WFLYWS0003: Starting service jboss.ws.endpoint."server-1.0-SNAPSHOT.war"."com.getinfo.service.ValidateInformation"
+2024-07-12 08:21:57,570 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 62) WFLYUT0021: Registered web context: '/server-1.0-SNAPSHOT' for server 'default-server'
+2024-07-12 08:21:57,586 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0010: Deployed "server-1.0-SNAPSHOT.war" (runtime-name : "server-1.0-SNAPSHOT.war")
+2024-07-12 08:25:00,827 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-7) WFLYJCA0019: Stopped Driver service with driver-name = server-1.0-SNAPSHOT.war_org.sqlite.JDBC_3_36
+2024-07-12 08:25:00,831 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 65) WFLYUT0022: Unregistered web context: '/server-1.0-SNAPSHOT' from server 'default-server'
+2024-07-12 08:25:00,837 INFO  [org.jboss.as.webservices] (MSC service thread 1-3) WFLYWS0004: Stopping service jboss.ws.endpoint."server-1.0-SNAPSHOT.war"."com.getinfo.service.ValidateInformation"
+2024-07-12 08:25:00,838 INFO  [org.jboss.as.webservices] (MSC service thread 1-4) WFLYWS0004: Stopping service jboss.ws.endpoint."server-1.0-SNAPSHOT.war"."com.getclient.service.GetClientService"
+2024-07-12 08:25:01,013 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) WFLYSRV0028: Stopped deployment server-1.0-SNAPSHOT.war (runtime-name: server-1.0-SNAPSHOT.war) in 188ms
+2024-07-12 08:25:01,038 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0009: Undeployed "server-1.0-SNAPSHOT.war" (runtime-name: "server-1.0-SNAPSHOT.war")
+2024-07-12 08:25:01,114 INFO  [org.jboss.as.server] (management-handler-thread - 1) WFLYSRV0236: Suspending server with no timeout.
+2024-07-12 08:25:01,116 INFO  [org.jboss.as.ejb3] (management-handler-thread - 1) WFLYEJB0493: EJB subsystem suspension complete
+2024-07-12 08:25:01,119 INFO  [org.jboss.as.server] (Management Triggered Shutdown) WFLYSRV0241: Shutting down in response to management operation 'shutdown'
+2024-07-12 08:25:01,130 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-3) WFLYJCA0010: Unbound data source [java:jboss/datasources/ExampleDS]
+2024-07-12 08:25:01,145 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-2) WFLYUT0019: Host default-host stopping
+2024-07-12 08:25:01,147 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0008: Undertow HTTPS listener https suspending
+2024-07-12 08:25:01,156 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-7) WFLYUT0007: Undertow HTTPS listener https stopped, was bound to 127.0.0.1:8443
+2024-07-12 08:25:01,168 INFO  [org.jboss.as.connector.deployers.jdbc] (MSC service thread 1-1) WFLYJCA0019: Stopped Driver service with driver-name = h2
+2024-07-12 08:25:01,176 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0008: Undertow HTTP listener default suspending
+2024-07-12 08:25:01,180 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-4) WFLYUT0007: Undertow HTTP listener default stopped, was bound to 127.0.0.1:5443
+2024-07-12 08:25:01,184 INFO  [org.wildfly.extension.undertow] (MSC service thread 1-8) WFLYUT0004: Undertow 2.0.0.Final stopping
+2024-07-12 08:25:01,194 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 66) WFLYCLINF0003: Stopped client-mappings cache from ejb container
+2024-07-12 08:25:01,204 INFO  [org.jboss.as] (MSC service thread 1-5) WFLYSRV0050: WildFly Full 12.0.0.Final (WildFly Core 4.0.0.Final) stopped in 76ms

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{85F8A718-91B4-4FDA-BD04-86D8C5F9D13A}|ASPCMVC07\\ASPCMVC07.csproj|e:\\bstu\\3_course\\2term\\asp\\lab_2_test\\aspcmvc07\\contollers\\taresearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F8A718-91B4-4FDA-BD04-86D8C5F9D13A}|ASPCMVC07\\ASPCMVC07.csproj|solutionrelative:aspcmvc07\\contollers\\taresearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85F8A718-91B4-4FDA-BD04-86D8C5F9D13A}|ASPCMVC07\\ASPCMVC07.csproj|e:\\bstu\\3_course\\2term\\asp\\lab_2_test\\aspcmvc07\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85F8A718-91B4-4FDA-BD04-86D8C5F9D13A}|ASPCMVC07\\ASPCMVC07.csproj|solutionrelative:aspcmvc07\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75B31B23-F27A-46F1-8AB7-2F262922E374}|ASPCMVC06\\ASPCMVC06.csproj|e:\\bstu\\3_course\\2term\\asp\\lab_2_test\\aspcmvc06\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75B31B23-F27A-46F1-8AB7-2F262922E374}|ASPCMVC06\\ASPCMVC06.csproj|solutionrelative:aspcmvc06\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75B31B23-F27A-46F1-8AB7-2F262922E374}|ASPCMVC06\\ASPCMVC06.csproj|e:\\bstu\\3_course\\2term\\asp\\lab_2_test\\aspcmvc06\\controllers\\tmresearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{75B31B23-F27A-46F1-8AB7-2F262922E374}|ASPCMVC06\\ASPCMVC06.csproj|solutionrelative:aspcmvc06\\controllers\\tmresearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75B31B23-F27A-46F1-8AB7-2F262922E374}|ASPCMVC06\\ASPCMVC06.csproj|e:\\bstu\\3_course\\2term\\asp\\lab_2_test\\aspcmvc06\\app.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{75B31B23-F27A-46F1-8AB7-2F262922E374}|ASPCMVC06\\ASPCMVC06.csproj|solutionrelative:aspcmvc06\\app.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TAResearch.cs",
+              "DocumentMoniker": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC07\\Contollers\\TAResearch.cs",
+              "RelativeDocumentMoniker": "ASPCMVC07\\Contollers\\TAResearch.cs",
+              "ToolTip": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC07\\Contollers\\TAResearch.cs",
+              "RelativeToolTip": "ASPCMVC07\\Contollers\\TAResearch.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T12:21:33.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC07\\Program.cs",
+              "RelativeDocumentMoniker": "ASPCMVC07\\Program.cs",
+              "ToolTip": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC07\\Program.cs",
+              "RelativeToolTip": "ASPCMVC07\\Program.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T12:10:24.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "app.http",
+              "DocumentMoniker": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC06\\app.http",
+              "RelativeDocumentMoniker": "ASPCMVC06\\app.http",
+              "ToolTip": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC06\\app.http",
+              "RelativeToolTip": "ASPCMVC06\\app.http",
+              "ViewState": "AQIAABMAAAAAAAAAAADwvyAAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-05-31T11:52:58.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TMResearch.cs",
+              "DocumentMoniker": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC06\\Controllers\\TMResearch.cs",
+              "RelativeDocumentMoniker": "ASPCMVC06\\Controllers\\TMResearch.cs",
+              "ToolTip": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC06\\Controllers\\TMResearch.cs",
+              "RelativeToolTip": "ASPCMVC06\\Controllers\\TMResearch.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T11:51:32.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC06\\Program.cs",
+              "RelativeDocumentMoniker": "ASPCMVC06\\Program.cs",
+              "ToolTip": "E:\\BSTU\\3_course\\2term\\ASP\\lab_2_test\\ASPCMVC06\\Program.cs",
+              "RelativeToolTip": "ASPCMVC06\\Program.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAQwG0AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-31T11:43:30.585Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
